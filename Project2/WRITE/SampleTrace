@@ -1,0 +1,421 @@
+
+********************************************************************************
+********************************************************************************
+**                                                                            **
+**                      YACSIM Version 2.0, 3/6/93                            **
+**                                                                            **
+**            Copyright 1993 by Rice University, Houston, Texas               **
+**                                                                            **
+**        Send comments to: J. Robert Jump, ECE Dept., Rice University        **
+**       P.O. Box 1892, Houston, TX 77251; (713) 527-8101; jrj@rice.edu       **
+**                                                                            **
+********************************************************************************
+********************************************************************************
+
+Opening File memtrace0
+Opening File memtrace1
+
+Starting CPU thread 0 at time  0.00
+
+Thread 0 got CPU at time  0.00
+
+Thread 0 makes request for Memory Address 7d1080 Block 3e884 at time  0.00
+
+Starting CPU thread 1 at time  0.00
+Memory Write Thread starts  at time  0.00
+Memory WRITER: Waiting for writeback request at time  0.00
+Thread 0:  Cache Miss for Memory Address 7d1080 at time  1.00
+
+In ServiceMemoryRequest: Thread: 0 Address: 7d1080 Type: WRITE Time:  1.00
+MemoryRead: Search Writeback Buffer for address 7d1080 Time  1.00
+
+Thread 1 got CPU at time  1.00
+
+Thread 1 makes request for Memory Address 7d1240 Block 3e892 at time  1.00
+Memory Read: Block 3e884 NOT found in Write Buffer: Contend for memory access semaphore. Time  2.00
+Memory Read:  Got memory access semaphore for Block 3e884.  Time  2.00
+Thread 1:  Cache Miss for Memory Address 7d1240 at time  2.00
+
+Completed Memory Read for Thread: 0 Block 3e884 at Time 202.00
+CheckAndFlush: No need to write back current CLEAN block in cache index 0. Time: 202.00
+InstallBlockInCache: Installing request in cache index 0. Time: 202.00
+
+In ServiceMemoryRequest: Thread: 1 Address: 7d1240 Type: WRITE Time: 202.00
+MemoryRead: Search Writeback Buffer for address 7d1240 Time 202.00
+Memory Read: Block 3e892 NOT found in Write Buffer: Contend for memory access semaphore. Time 203.00
+Memory Read:  Got memory access semaphore for Block 3e892.  Time 203.00
+Thread 0:  Cache Hit  for Memory Address 7d1080 at time 203.00
+Thread 0 completes request for memory address 7d1080 at time 203.00
+
+Thread 0 makes request for Memory Address 7d1084 Block 3e884 at time 203.00
+Thread 0:  Cache Hit  for Memory Address 7d1084 at time 204.00
+Thread 0 completes request for memory address 7d1084 at time 204.00
+
+Thread 0 makes request for Memory Address 7d1088 Block 3e884 at time 204.00
+Thread 0:  Cache Hit  for Memory Address 7d1088 at time 205.00
+Thread 0 completes request for memory address 7d1088 at time 205.00
+
+Thread 0 makes request for Memory Address 7d108c Block 3e884 at time 205.00
+Thread 0:  Cache Hit  for Memory Address 7d108c at time 206.00
+Thread 0 completes request for memory address 7d108c at time 206.00
+
+Thread 0 makes request for Memory Address 7d1090 Block 3e884 at time 206.00
+Thread 0:  Cache Hit  for Memory Address 7d1090 at time 207.00
+Thread 0 completes request for memory address 7d1090 at time 207.00
+
+Thread 0 makes request for Memory Address 7d1094 Block 3e884 at time 207.00
+Thread 0:  Cache Hit  for Memory Address 7d1094 at time 208.00
+Thread 0 completes request for memory address 7d1094 at time 208.00
+
+Thread 0 makes request for Memory Address 7d1098 Block 3e884 at time 208.00
+Thread 0:  Cache Hit  for Memory Address 7d1098 at time 209.00
+Thread 0 completes request for memory address 7d1098 at time 209.00
+
+Thread 0 makes request for Memory Address 7d109c Block 3e884 at time 209.00
+Thread 0:  Cache Hit  for Memory Address 7d109c at time 210.00
+Thread 0 completes request for memory address 7d109c at time 210.00
+
+Thread 0 makes request for Memory Address 7d10a0 Block 3e885 at time 210.00
+Thread 0:  Cache Miss for Memory Address 7d10a0 at time 211.00
+
+Completed Memory Read for Thread: 1 Block 3e892 at Time 403.00
+CheckAndFlush: No need to write back current CLEAN block in cache index 2. Time: 403.00
+InstallBlockInCache: Installing request in cache index 2. Time: 403.00
+
+In ServiceMemoryRequest: Thread: 0 Address: 7d10a0 Type: WRITE Time: 403.00
+MemoryRead: Search Writeback Buffer for address 7d10a0 Time 403.00
+Memory Read: Block 3e885 NOT found in Write Buffer: Contend for memory access semaphore. Time 404.00
+Memory Read:  Got memory access semaphore for Block 3e885.  Time 404.00
+Thread 1:  Cache Hit  for Memory Address 7d1240 at time 404.00
+Thread 1 completes request for memory address 7d1240 at time 404.00
+
+Thread 1 makes request for Memory Address 7d1244 Block 3e892 at time 404.00
+Thread 1:  Cache Hit  for Memory Address 7d1244 at time 405.00
+Thread 1 completes request for memory address 7d1244 at time 405.00
+
+Thread 1 makes request for Memory Address 7d1248 Block 3e892 at time 405.00
+Thread 1:  Cache Hit  for Memory Address 7d1248 at time 406.00
+Thread 1 completes request for memory address 7d1248 at time 406.00
+
+Thread 1 makes request for Memory Address 7d124c Block 3e892 at time 406.00
+Thread 1:  Cache Hit  for Memory Address 7d124c at time 407.00
+Thread 1 completes request for memory address 7d124c at time 407.00
+
+Thread 1 makes request for Memory Address 7d1250 Block 3e892 at time 407.00
+Thread 1:  Cache Hit  for Memory Address 7d1250 at time 408.00
+Thread 1 completes request for memory address 7d1250 at time 408.00
+
+Thread 1 makes request for Memory Address 7d1254 Block 3e892 at time 408.00
+Thread 1:  Cache Hit  for Memory Address 7d1254 at time 409.00
+Thread 1 completes request for memory address 7d1254 at time 409.00
+
+Thread 1 makes request for Memory Address 7d1258 Block 3e892 at time 409.00
+Thread 1:  Cache Hit  for Memory Address 7d1258 at time 410.00
+Thread 1 completes request for memory address 7d1258 at time 410.00
+
+Thread 1 makes request for Memory Address 7d125c Block 3e892 at time 410.00
+Thread 1:  Cache Hit  for Memory Address 7d125c at time 411.00
+Thread 1 completes request for memory address 7d125c at time 411.00
+
+Thread 1 makes request for Memory Address 7d1260 Block 3e893 at time 411.00
+Thread 1:  Cache Miss for Memory Address 7d1260 at time 412.00
+
+Completed Memory Read for Thread: 0 Block 3e885 at Time 604.00
+CheckAndFlush: No need to write back current CLEAN block in cache index 1. Time: 604.00
+InstallBlockInCache: Installing request in cache index 1. Time: 604.00
+
+In ServiceMemoryRequest: Thread: 1 Address: 7d1260 Type: WRITE Time: 604.00
+MemoryRead: Search Writeback Buffer for address 7d1260 Time 604.00
+Memory Read: Block 3e893 NOT found in Write Buffer: Contend for memory access semaphore. Time 605.00
+Memory Read:  Got memory access semaphore for Block 3e893.  Time 605.00
+Thread 0:  Cache Hit  for Memory Address 7d10a0 at time 605.00
+Thread 0 completes request for memory address 7d10a0 at time 605.00
+
+Thread 0 makes request for Memory Address 7d10a4 Block 3e885 at time 605.00
+Thread 0:  Cache Hit  for Memory Address 7d10a4 at time 606.00
+Thread 0 completes request for memory address 7d10a4 at time 606.00
+
+Thread 0 makes request for Memory Address 7d10a8 Block 3e885 at time 606.00
+Thread 0:  Cache Hit  for Memory Address 7d10a8 at time 607.00
+Thread 0 completes request for memory address 7d10a8 at time 607.00
+
+Thread 0 makes request for Memory Address 7d10ac Block 3e885 at time 607.00
+Thread 0:  Cache Hit  for Memory Address 7d10ac at time 608.00
+Thread 0 completes request for memory address 7d10ac at time 608.00
+
+Thread 0 makes request for Memory Address 7d10b0 Block 3e885 at time 608.00
+Thread 0:  Cache Hit  for Memory Address 7d10b0 at time 609.00
+Thread 0 completes request for memory address 7d10b0 at time 609.00
+
+Thread 0 makes request for Memory Address 7d10b4 Block 3e885 at time 609.00
+Thread 0:  Cache Hit  for Memory Address 7d10b4 at time 610.00
+Thread 0 completes request for memory address 7d10b4 at time 610.00
+
+Thread 0 makes request for Memory Address 7d10b8 Block 3e885 at time 610.00
+Thread 0:  Cache Hit  for Memory Address 7d10b8 at time 611.00
+Thread 0 completes request for memory address 7d10b8 at time 611.00
+
+Thread 0 makes request for Memory Address 7d10bc Block 3e885 at time 611.00
+Thread 0:  Cache Hit  for Memory Address 7d10bc at time 612.00
+Thread 0 completes request for memory address 7d10bc at time 612.00
+
+Thread 0 makes request for Memory Address 7d10c0 Block 3e886 at time 612.00
+Thread 0:  Cache Miss for Memory Address 7d10c0 at time 613.00
+
+Completed Memory Read for Thread: 1 Block 3e893 at Time 805.00
+CheckAndFlush: No need to write back current CLEAN block in cache index 3. Time: 805.00
+InstallBlockInCache: Installing request in cache index 3. Time: 805.00
+
+In ServiceMemoryRequest: Thread: 0 Address: 7d10c0 Type: WRITE Time: 805.00
+MemoryRead: Search Writeback Buffer for address 7d10c0 Time 805.00
+Memory Read: Block 3e886 NOT found in Write Buffer: Contend for memory access semaphore. Time 806.00
+Memory Read:  Got memory access semaphore for Block 3e886.  Time 806.00
+Thread 1:  Cache Hit  for Memory Address 7d1260 at time 806.00
+Thread 1 completes request for memory address 7d1260 at time 806.00
+
+Thread 1 makes request for Memory Address 7d1264 Block 3e893 at time 806.00
+Thread 1:  Cache Hit  for Memory Address 7d1264 at time 807.00
+Thread 1 completes request for memory address 7d1264 at time 807.00
+
+Thread 1 makes request for Memory Address 7d1268 Block 3e893 at time 807.00
+Thread 1:  Cache Hit  for Memory Address 7d1268 at time 808.00
+Thread 1 completes request for memory address 7d1268 at time 808.00
+
+Thread 1 makes request for Memory Address 7d126c Block 3e893 at time 808.00
+Thread 1:  Cache Hit  for Memory Address 7d126c at time 809.00
+Thread 1 completes request for memory address 7d126c at time 809.00
+
+Thread 1 makes request for Memory Address 7d1270 Block 3e893 at time 809.00
+Thread 1:  Cache Hit  for Memory Address 7d1270 at time 810.00
+Thread 1 completes request for memory address 7d1270 at time 810.00
+
+Thread 1 makes request for Memory Address 7d1274 Block 3e893 at time 810.00
+Thread 1:  Cache Hit  for Memory Address 7d1274 at time 811.00
+Thread 1 completes request for memory address 7d1274 at time 811.00
+
+Thread 1 makes request for Memory Address 7d1278 Block 3e893 at time 811.00
+Thread 1:  Cache Hit  for Memory Address 7d1278 at time 812.00
+Thread 1 completes request for memory address 7d1278 at time 812.00
+
+Thread 1 makes request for Memory Address 7d127c Block 3e893 at time 812.00
+Thread 1:  Cache Hit  for Memory Address 7d127c at time 813.00
+Thread 1 completes request for memory address 7d127c at time 813.00
+
+Thread 1 makes request for Memory Address 7d1280 Block 3e894 at time 813.00
+Thread 1:  Cache Miss for Memory Address 7d1280 at time 814.00
+
+Completed Memory Read for Thread: 0 Block 3e886 at Time 1006.00
+
+CheckAndFlush: Need  to flush current DIRTY block in cache index 2. Time: 1006.00
+Flushing Dirty Block  3e892 at time 1006.00
+InstallBlockInCache: Installing request in cache index 2. Time: 1006.00
+
+In ServiceMemoryRequest: Thread: 1 Address: 7d1280 Type: WRITE Time: 1006.00
+MemoryRead: Search Writeback Buffer for address 7d1280 Time 1006.00
+Memory Read: Block 3e894 NOT found in Write Buffer: Contend for memory access semaphore. Time 1007.00
+Memory Read:  Got memory access semaphore for Block 3e894.  Time 1007.00
+Thread 0:  Cache Hit  for Memory Address 7d10c0 at time 1007.00
+Thread 0 completes request for memory address 7d10c0 at time 1007.00
+Memory WRITER: Contend for memory semaphore at time 1007.00
+
+Thread 0 makes request for Memory Address 7d10c4 Block 3e886 at time 1007.00
+Thread 0:  Cache Hit  for Memory Address 7d10c4 at time 1008.00
+Thread 0 completes request for memory address 7d10c4 at time 1008.00
+
+Thread 0 makes request for Memory Address 7d10c8 Block 3e886 at time 1008.00
+Thread 0:  Cache Hit  for Memory Address 7d10c8 at time 1009.00
+Thread 0 completes request for memory address 7d10c8 at time 1009.00
+
+Thread 0 makes request for Memory Address 7d10cc Block 3e886 at time 1009.00
+Thread 0:  Cache Hit  for Memory Address 7d10cc at time 1010.00
+Thread 0 completes request for memory address 7d10cc at time 1010.00
+
+Thread 0 makes request for Memory Address 7d10d0 Block 3e886 at time 1010.00
+Thread 0:  Cache Hit  for Memory Address 7d10d0 at time 1011.00
+Thread 0 completes request for memory address 7d10d0 at time 1011.00
+
+Thread 0 makes request for Memory Address 7d10d4 Block 3e886 at time 1011.00
+Thread 0:  Cache Hit  for Memory Address 7d10d4 at time 1012.00
+Thread 0 completes request for memory address 7d10d4 at time 1012.00
+
+Thread 0 makes request for Memory Address 7d10d8 Block 3e886 at time 1012.00
+Thread 0:  Cache Hit  for Memory Address 7d10d8 at time 1013.00
+Thread 0 completes request for memory address 7d10d8 at time 1013.00
+
+Thread 0 makes request for Memory Address 7d10dc Block 3e886 at time 1013.00
+Thread 0:  Cache Hit  for Memory Address 7d10dc at time 1014.00
+Thread 0 completes request for memory address 7d10dc at time 1014.00
+
+Thread 0 makes request for Memory Address 7d10e0 Block 3e887 at time 1014.00
+Thread 0:  Cache Miss for Memory Address 7d10e0 at time 1015.00
+
+Completed Memory Read for Thread: 1 Block 3e894 at Time 1207.00
+
+CheckAndFlush: Need  to flush current DIRTY block in cache index 0. Time: 1207.00
+Flushing Dirty Block  3e884 at time 1207.00
+InstallBlockInCache: Installing request in cache index 0. Time: 1207.00
+
+In ServiceMemoryRequest: Thread: 0 Address: 7d10e0 Type: WRITE Time: 1207.00
+MemoryRead: Search Writeback Buffer for address 7d10e0 Time 1207.00
+Memory WRITER: Granted  memory semaphore at time 1207.00
+Memory Read: Block 3e887 NOT found in Write Buffer: Contend for memory access semaphore. Time 1208.00
+Thread 1:  Cache Hit  for Memory Address 7d1280 at time 1208.00
+Thread 1 completes request for memory address 7d1280 at time 1208.00
+
+Thread 1 makes request for Memory Address 7d1284 Block 3e894 at time 1208.00
+Thread 1:  Cache Hit  for Memory Address 7d1284 at time 1209.00
+Thread 1 completes request for memory address 7d1284 at time 1209.00
+
+Thread 1 makes request for Memory Address 7d1288 Block 3e894 at time 1209.00
+Thread 1:  Cache Hit  for Memory Address 7d1288 at time 1210.00
+Thread 1 completes request for memory address 7d1288 at time 1210.00
+
+Thread 1 makes request for Memory Address 7d128c Block 3e894 at time 1210.00
+Thread 1:  Cache Hit  for Memory Address 7d128c at time 1211.00
+Thread 1 completes request for memory address 7d128c at time 1211.00
+
+Thread 1 makes request for Memory Address 7d1290 Block 3e894 at time 1211.00
+Thread 1:  Cache Hit  for Memory Address 7d1290 at time 1212.00
+Thread 1 completes request for memory address 7d1290 at time 1212.00
+
+Thread 1 makes request for Memory Address 7d1294 Block 3e894 at time 1212.00
+Thread 1:  Cache Hit  for Memory Address 7d1294 at time 1213.00
+Thread 1 completes request for memory address 7d1294 at time 1213.00
+
+Thread 1 makes request for Memory Address 7d1298 Block 3e894 at time 1213.00
+Thread 1:  Cache Hit  for Memory Address 7d1298 at time 1214.00
+Thread 1 completes request for memory address 7d1298 at time 1214.00
+
+Thread 1 makes request for Memory Address 7d129c Block 3e894 at time 1214.00
+Thread 1:  Cache Hit  for Memory Address 7d129c at time 1215.00
+Thread 1 completes request for memory address 7d129c at time 1215.00
+
+Thread 1 makes request for Memory Address 7d12a0 Block 3e895 at time 1215.00
+Thread 1:  Cache Miss for Memory Address 7d12a0 at time 1216.00
+Memory WRITER: Completed write of  block 3e892 with timestamp 1006.00 to memory at Time:1407.00
+Memory WRITER: Waiting for writeback request at time 1407.00
+Memory Read:  Got memory access semaphore for Block 3e887.  Time 1407.00
+Memory WRITER: Contend for memory semaphore at time 1407.00
+
+Completed Memory Read for Thread: 0 Block 3e887 at Time 1607.00
+
+CheckAndFlush: Need  to flush current DIRTY block in cache index 3. Time: 1607.00
+Flushing Dirty Block  3e893 at time 1607.00
+InstallBlockInCache: Installing request in cache index 3. Time: 1607.00
+
+In ServiceMemoryRequest: Thread: 1 Address: 7d12a0 Type: WRITE Time: 1607.00
+MemoryRead: Search Writeback Buffer for address 7d12a0 Time 1607.00
+Memory WRITER: Granted  memory semaphore at time 1607.00
+Memory Read: Block 3e895 NOT found in Write Buffer: Contend for memory access semaphore. Time 1608.00
+Thread 0:  Cache Hit  for Memory Address 7d10e0 at time 1608.00
+Thread 0 completes request for memory address 7d10e0 at time 1608.00
+
+Thread 0 makes request for Memory Address 7d10e4 Block 3e887 at time 1608.00
+Thread 0:  Cache Hit  for Memory Address 7d10e4 at time 1609.00
+Thread 0 completes request for memory address 7d10e4 at time 1609.00
+
+Thread 0 makes request for Memory Address 7d10e8 Block 3e887 at time 1609.00
+Thread 0:  Cache Hit  for Memory Address 7d10e8 at time 1610.00
+Thread 0 completes request for memory address 7d10e8 at time 1610.00
+
+Thread 0 makes request for Memory Address 7d10ec Block 3e887 at time 1610.00
+Thread 0:  Cache Hit  for Memory Address 7d10ec at time 1611.00
+Thread 0 completes request for memory address 7d10ec at time 1611.00
+
+Thread 0 makes request for Memory Address 7d10f0 Block 3e887 at time 1611.00
+Thread 0:  Cache Hit  for Memory Address 7d10f0 at time 1612.00
+Thread 0 completes request for memory address 7d10f0 at time 1612.00
+
+Thread 0 makes request for Memory Address 7d10f4 Block 3e887 at time 1612.00
+Thread 0:  Cache Hit  for Memory Address 7d10f4 at time 1613.00
+Thread 0 completes request for memory address 7d10f4 at time 1613.00
+
+Thread 0 makes request for Memory Address 7d10f8 Block 3e887 at time 1613.00
+Thread 0:  Cache Hit  for Memory Address 7d10f8 at time 1614.00
+Thread 0 completes request for memory address 7d10f8 at time 1614.00
+
+Thread 0 makes request for Memory Address 7d10fc Block 3e887 at time 1614.00
+Thread 0:  Cache Hit  for Memory Address 7d10fc at time 1615.00
+Thread 0 completes request for memory address 7d10fc at time 1615.00
+Thread 0 completes at time 1615.00
+Memory WRITER: Completed write of  block 3e884 with timestamp 1207.00 to memory at Time:1807.00
+Memory WRITER: Waiting for writeback request at time 1807.00
+Memory Read:  Got memory access semaphore for Block 3e895.  Time 1807.00
+Memory WRITER: Contend for memory semaphore at time 1807.00
+
+Completed Memory Read for Thread: 1 Block 3e895 at Time 2007.00
+
+CheckAndFlush: Need  to flush current DIRTY block in cache index 1. Time: 2007.00
+Flushing Dirty Block  3e885 at time 2007.00
+InstallBlockInCache: Installing request in cache index 1. Time: 2007.00
+Memory WRITER: Granted  memory semaphore at time 2007.00
+Thread 1:  Cache Hit  for Memory Address 7d12a0 at time 2008.00
+Thread 1 completes request for memory address 7d12a0 at time 2008.00
+
+Thread 1 makes request for Memory Address 7d12a4 Block 3e895 at time 2008.00
+Thread 1:  Cache Hit  for Memory Address 7d12a4 at time 2009.00
+Thread 1 completes request for memory address 7d12a4 at time 2009.00
+
+Thread 1 makes request for Memory Address 7d12a8 Block 3e895 at time 2009.00
+Thread 1:  Cache Hit  for Memory Address 7d12a8 at time 2010.00
+Thread 1 completes request for memory address 7d12a8 at time 2010.00
+
+Thread 1 makes request for Memory Address 7d12ac Block 3e895 at time 2010.00
+Thread 1:  Cache Hit  for Memory Address 7d12ac at time 2011.00
+Thread 1 completes request for memory address 7d12ac at time 2011.00
+
+Thread 1 makes request for Memory Address 7d12b0 Block 3e895 at time 2011.00
+Thread 1:  Cache Hit  for Memory Address 7d12b0 at time 2012.00
+Thread 1 completes request for memory address 7d12b0 at time 2012.00
+
+Thread 1 makes request for Memory Address 7d12b4 Block 3e895 at time 2012.00
+Thread 1:  Cache Hit  for Memory Address 7d12b4 at time 2013.00
+Thread 1 completes request for memory address 7d12b4 at time 2013.00
+
+Thread 1 makes request for Memory Address 7d12b8 Block 3e895 at time 2013.00
+Thread 1:  Cache Hit  for Memory Address 7d12b8 at time 2014.00
+Thread 1 completes request for memory address 7d12b8 at time 2014.00
+
+Thread 1 makes request for Memory Address 7d12bc Block 3e895 at time 2014.00
+Thread 1:  Cache Hit  for Memory Address 7d12bc at time 2015.00
+Thread 1 completes request for memory address 7d12bc at time 2015.00
+Thread 1 completes at time 2015.00
+Memory WRITER: Completed write of  block 3e893 with timestamp 1607.00 to memory at Time:2207.00
+Memory WRITER: Waiting for writeback request at time 2207.00
+Memory WRITER: Contend for memory semaphore at time 2207.00
+Memory WRITER: Granted  memory semaphore at time 2207.00
+Memory WRITER: Completed write of  block 3e885 with timestamp 2007.00 to memory at Time:2407.00
+Memory WRITER: Waiting for writeback request at time 2407.00
+
+All Threads Completed
+
+Simulation ended  at 2407
+
+Cache Size (blocks): 4	Block Size (bytes): 32 
+CPU Delay (cycles):   0
+Memory READ Time (cycles): 200  Memory WRITE Time (cycles): 200
+********************************************
+Number of records processed from trace file 0: 32
+Thread: 0  Hits: 32  Misses: 4
+Thread: 0 Total CPU Time Busy: 36.00
+********************************************
+Number of records processed from trace file 1: 32
+Thread: 1  Hits: 32  Misses: 4
+Thread: 1 Total CPU Time Busy: 36.00
+
+********************************************
+Total number of Records read: 64
+Total number of Hits: 64
+Total number of Misses: 8
+Total time CPU Busy: 72
+Total number of Evictions of dirty blocks: 4
+Total number Read Misses Found In Write Buffer: 0
+Total number of Writebacks Completed: 4
+Memory Statistics:
+Total Memory Read Time: 1600.00
+Total Memory Write Time: 800.00
+Total Memory Idle Time:  7.00
+
+********************************************************************************
+************************* YACSIM - Normal Termination **************************
+********************************************************************************

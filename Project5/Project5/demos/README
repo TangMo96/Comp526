@@ -1,0 +1,21 @@
+TOTALSIZE is set at 32
+MEM_CYCLE_TIME = 10.0
+MAXDELAY = 0
+CACHE SIZE: 1 Block in each processor
+
+demo1 (1 processor)
+-----------------------
+NUM_PROCESSORS = 1 and CHUNK = TRUE
+Processor does 32 reads and 32 writes
+
+
+demo2C (Chunked partititoning using 2 processors)
+-------------------------------------------------
+NUM_PROCESSORS=2 and CHUNK = TRUE
+Each processor does 16 reads and 16 writes
+
+
+demo2I  (Interleaved or striped partitioning  using 2 processors)
+-----------------------------------------------------------------
+NUM_PROCESSORS=2 and CHUNK = FALSE  
+Each processor does 16 reads and 16 writes

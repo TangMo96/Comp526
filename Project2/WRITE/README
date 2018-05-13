@@ -1,0 +1,24 @@
+Synopsis:
+---------
+
+Source Files
+-------------
+maketrace.c  -- C Source for simulation of all-WRITE  traces and address range for Part A (uses global.h)
+write_TEMPLATE.c --  Partial C Source for simulation of WRITE  workloads (uses global.h)
+
+
+Header Files
+------------
+sim.h -- Header file for Yacsim
+global.h -- Header file for trace generation and simulation code
+
+Object Files
+--------------
+yacsim.o -- Yacsim Simulator 
+utils.o  -- Utility functions for the simulator 
+
+Text Files
+------------
+README -- This file
+utils.txt -- Description of functions in utilities.o (no change from project 1)
+SampleTrace -- Trace for default settings for trace of 32 records per thread

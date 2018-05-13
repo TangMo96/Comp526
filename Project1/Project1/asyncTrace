@@ -1,0 +1,412 @@
+
+********************************************************************************
+********************************************************************************
+**                                                                            **
+**                      YACSIM Version 2.0, 3/6/93                            **
+**                                                                            **
+**            Copyright 1993 by Rice University, Houston, Texas               **
+**                                                                            **
+**        Send comments to: J. Robert Jump, ECE Dept., Rice University        **
+**       P.O. Box 1892, Houston, TX 77251; (713) 527-8101; jrj@rice.edu       **
+**                                                                            **
+********************************************************************************
+********************************************************************************
+
+Opening File memtrace0
+CPU thread  0 starts at time  0.00
+
+Thread 0 makes request for memory address 6013c0 at time  0.00
+Memory Controller  starts at time  0.00
+Memory Write Thread starts  at time  0.00
+
+Cache MISS for address 6013c0 at time  1.00
+Thread: 0  Creating Memory Request for Address 6013c0 at time  1.00
+In ServiceMemoryRequest: Thread: 0 Address: 6013c0  Time:  1.00
+In function MemoryRead at time  1.00
+Address  6013c0 not found in Write Queue: Time:  2.00
+Contend for memory semaphore to read memory: Time:  2.00
+Read for  address 6013c0: Got  memory semaphore at Time:  2.00
+B
+
+Completed Memory Read  for Address : 6013c0 at time 52.00
+Thread: 0  Cache HIT  for Address 6013c0 at time 53.00
+Thread 0 completes request for memory address 6013c0 at time 53.00
+
+Thread 0 makes request for memory address 6013c4 at time 53.00
+Thread: 0  Cache HIT  for Address 6013c4 at time 54.00
+Thread 0 completes request for memory address 6013c4 at time 54.00
+
+Thread 0 makes request for memory address 6013c8 at time 54.00
+Thread: 0  Cache HIT  for Address 6013c8 at time 55.00
+Thread 0 completes request for memory address 6013c8 at time 55.00
+
+Thread 0 makes request for memory address 6013cc at time 55.00
+Thread: 0  Cache HIT  for Address 6013cc at time 56.00
+Thread 0 completes request for memory address 6013cc at time 56.00
+
+Thread 0 makes request for memory address 6013d0 at time 56.00
+Thread: 0  Cache HIT  for Address 6013d0 at time 57.00
+Thread 0 completes request for memory address 6013d0 at time 57.00
+
+Thread 0 makes request for memory address 6013d4 at time 57.00
+Thread: 0  Cache HIT  for Address 6013d4 at time 58.00
+Thread 0 completes request for memory address 6013d4 at time 58.00
+
+Thread 0 makes request for memory address 6013d8 at time 58.00
+Thread: 0  Cache HIT  for Address 6013d8 at time 59.00
+Thread 0 completes request for memory address 6013d8 at time 59.00
+
+Thread 0 makes request for memory address 6013dc at time 59.00
+Thread: 0  Cache HIT  for Address 6013dc at time 60.00
+Thread 0 completes request for memory address 6013dc at time 60.00
+
+Thread 0 makes request for memory address 6013e0 at time 60.00
+
+Cache MISS for address 6013e0 at time 61.00
+Thread: 0  Creating Memory Request for Address 6013e0 at time 61.00
+In ServiceMemoryRequest: Thread: 0 Address: 6013e0  Time: 61.00
+In function MemoryRead at time 61.00
+Address  6013e0 not found in Write Queue: Time: 62.00
+Contend for memory semaphore to read memory: Time: 62.00
+Read for  address 6013e0: Got  memory semaphore at Time: 62.00
+B
+
+Completed Memory Read  for Address : 6013e0 at time 112.00
+Thread: 0  Cache HIT  for Address 6013e0 at time 113.00
+Thread 0 completes request for memory address 6013e0 at time 113.00
+
+Thread 0 makes request for memory address 6013e4 at time 113.00
+Thread: 0  Cache HIT  for Address 6013e4 at time 114.00
+Thread 0 completes request for memory address 6013e4 at time 114.00
+
+Thread 0 makes request for memory address 6013e8 at time 114.00
+Thread: 0  Cache HIT  for Address 6013e8 at time 115.00
+Thread 0 completes request for memory address 6013e8 at time 115.00
+
+Thread 0 makes request for memory address 6013ec at time 115.00
+Thread: 0  Cache HIT  for Address 6013ec at time 116.00
+Thread 0 completes request for memory address 6013ec at time 116.00
+
+Thread 0 makes request for memory address 6013f0 at time 116.00
+Thread: 0  Cache HIT  for Address 6013f0 at time 117.00
+Thread 0 completes request for memory address 6013f0 at time 117.00
+
+Thread 0 makes request for memory address 6013f4 at time 117.00
+Thread: 0  Cache HIT  for Address 6013f4 at time 118.00
+Thread 0 completes request for memory address 6013f4 at time 118.00
+
+Thread 0 makes request for memory address 6013f8 at time 118.00
+Thread: 0  Cache HIT  for Address 6013f8 at time 119.00
+Thread 0 completes request for memory address 6013f8 at time 119.00
+
+Thread 0 makes request for memory address 6013fc at time 119.00
+Thread: 0  Cache HIT  for Address 6013fc at time 120.00
+Thread 0 completes request for memory address 6013fc at time 120.00
+
+Thread 0 makes request for memory address 601400 at time 120.00
+
+Cache MISS for address 601400 at time 121.00
+Flushing Dirty Block  3009e at time 121.00
+Thread: 0  Creating Memory Request for Address 601400 at time 121.00
+In ServiceMemoryRequest: Thread: 0 Address: 601400  Time: 121.00
+In function MemoryRead at time 121.00
+Memory Write Thread: Get write request from queue  at time 121.00
+Address  601400 not found in Write Queue: Time: 122.00
+Contend for memory semaphore to read memory: Time: 122.00
+Read for  address 601400: Got  memory semaphore at Time: 122.00
+B
+Memory Write Thread: Contend for memory semaphore at time 122.00
+
+Completed Memory Read  for Address : 601400 at time 172.00
+Memory Write Thread: Granted  memory semaphore at time 172.00
+Thread: 0  Cache HIT  for Address 601400 at time 173.00
+Thread 0 completes request for memory address 601400 at time 173.00
+
+Thread 0 makes request for memory address 601404 at time 173.00
+Thread: 0  Cache HIT  for Address 601404 at time 174.00
+Thread 0 completes request for memory address 601404 at time 174.00
+
+Thread 0 makes request for memory address 601408 at time 174.00
+Thread: 0  Cache HIT  for Address 601408 at time 175.00
+Thread 0 completes request for memory address 601408 at time 175.00
+
+Thread 0 makes request for memory address 60140c at time 175.00
+Thread: 0  Cache HIT  for Address 60140c at time 176.00
+Thread 0 completes request for memory address 60140c at time 176.00
+
+Thread 0 makes request for memory address 601410 at time 176.00
+Thread: 0  Cache HIT  for Address 601410 at time 177.00
+Thread 0 completes request for memory address 601410 at time 177.00
+
+Thread 0 makes request for memory address 601414 at time 177.00
+Thread: 0  Cache HIT  for Address 601414 at time 178.00
+Thread 0 completes request for memory address 601414 at time 178.00
+
+Thread 0 makes request for memory address 601418 at time 178.00
+Thread: 0  Cache HIT  for Address 601418 at time 179.00
+Thread 0 completes request for memory address 601418 at time 179.00
+
+Thread 0 makes request for memory address 60141c at time 179.00
+Thread: 0  Cache HIT  for Address 60141c at time 180.00
+Thread 0 completes request for memory address 60141c at time 180.00
+
+Thread 0 makes request for memory address 601420 at time 180.00
+
+Cache MISS for address 601420 at time 181.00
+Flushing Dirty Block  3009f at time 181.00
+Thread: 0  Creating Memory Request for Address 601420 at time 181.00
+In ServiceMemoryRequest: Thread: 0 Address: 601420  Time: 181.00
+In function MemoryRead at time 181.00
+Address  601420 not found in Write Queue: Time: 182.00
+Contend for memory semaphore to read memory: Time: 182.00
+Memory Write Thread completed Writeback. Time 222.00
+Read for  address 601420: Got  memory semaphore at Time: 222.00
+B
+Memory Write Thread: Get write request from queue  at time 222.00
+Memory Write Thread: Contend for memory semaphore at time 222.00
+
+Completed Memory Read  for Address : 601420 at time 272.00
+Memory Write Thread: Granted  memory semaphore at time 272.00
+Thread: 0  Cache HIT  for Address 601420 at time 273.00
+Thread 0 completes request for memory address 601420 at time 273.00
+
+Thread 0 makes request for memory address 601424 at time 273.00
+Thread: 0  Cache HIT  for Address 601424 at time 274.00
+Thread 0 completes request for memory address 601424 at time 274.00
+
+Thread 0 makes request for memory address 601428 at time 274.00
+Thread: 0  Cache HIT  for Address 601428 at time 275.00
+Thread 0 completes request for memory address 601428 at time 275.00
+
+Thread 0 makes request for memory address 60142c at time 275.00
+Thread: 0  Cache HIT  for Address 60142c at time 276.00
+Thread 0 completes request for memory address 60142c at time 276.00
+
+Thread 0 makes request for memory address 601430 at time 276.00
+Thread: 0  Cache HIT  for Address 601430 at time 277.00
+Thread 0 completes request for memory address 601430 at time 277.00
+
+Thread 0 makes request for memory address 601434 at time 277.00
+Thread: 0  Cache HIT  for Address 601434 at time 278.00
+Thread 0 completes request for memory address 601434 at time 278.00
+
+Thread 0 makes request for memory address 601438 at time 278.00
+Thread: 0  Cache HIT  for Address 601438 at time 279.00
+Thread 0 completes request for memory address 601438 at time 279.00
+
+Thread 0 makes request for memory address 60143c at time 279.00
+Thread: 0  Cache HIT  for Address 60143c at time 280.00
+Thread 0 completes request for memory address 60143c at time 280.00
+
+Thread 0 makes request for memory address 601440 at time 280.00
+
+Cache MISS for address 601440 at time 281.00
+Flushing Dirty Block  300a0 at time 281.00
+Thread: 0  Creating Memory Request for Address 601440 at time 281.00
+In ServiceMemoryRequest: Thread: 0 Address: 601440  Time: 281.00
+In function MemoryRead at time 281.00
+Address  601440 not found in Write Queue: Time: 282.00
+Contend for memory semaphore to read memory: Time: 282.00
+Memory Write Thread completed Writeback. Time 322.00
+Read for  address 601440: Got  memory semaphore at Time: 322.00
+B
+Memory Write Thread: Get write request from queue  at time 322.00
+Memory Write Thread: Contend for memory semaphore at time 322.00
+
+Completed Memory Read  for Address : 601440 at time 372.00
+Memory Write Thread: Granted  memory semaphore at time 372.00
+Thread: 0  Cache HIT  for Address 601440 at time 373.00
+Thread 0 completes request for memory address 601440 at time 373.00
+
+Thread 0 makes request for memory address 601444 at time 373.00
+Thread: 0  Cache HIT  for Address 601444 at time 374.00
+Thread 0 completes request for memory address 601444 at time 374.00
+
+Thread 0 makes request for memory address 601448 at time 374.00
+Thread: 0  Cache HIT  for Address 601448 at time 375.00
+Thread 0 completes request for memory address 601448 at time 375.00
+
+Thread 0 makes request for memory address 60144c at time 375.00
+Thread: 0  Cache HIT  for Address 60144c at time 376.00
+Thread 0 completes request for memory address 60144c at time 376.00
+
+Thread 0 makes request for memory address 601450 at time 376.00
+Thread: 0  Cache HIT  for Address 601450 at time 377.00
+Thread 0 completes request for memory address 601450 at time 377.00
+
+Thread 0 makes request for memory address 601454 at time 377.00
+Thread: 0  Cache HIT  for Address 601454 at time 378.00
+Thread 0 completes request for memory address 601454 at time 378.00
+
+Thread 0 makes request for memory address 601458 at time 378.00
+Thread: 0  Cache HIT  for Address 601458 at time 379.00
+Thread 0 completes request for memory address 601458 at time 379.00
+
+Thread 0 makes request for memory address 60145c at time 379.00
+Thread: 0  Cache HIT  for Address 60145c at time 380.00
+Thread 0 completes request for memory address 60145c at time 380.00
+
+Thread 0 makes request for memory address 601460 at time 380.00
+
+Cache MISS for address 601460 at time 381.00
+Flushing Dirty Block  300a1 at time 381.00
+Thread: 0  Creating Memory Request for Address 601460 at time 381.00
+In ServiceMemoryRequest: Thread: 0 Address: 601460  Time: 381.00
+In function MemoryRead at time 381.00
+Address  601460 not found in Write Queue: Time: 382.00
+Contend for memory semaphore to read memory: Time: 382.00
+Memory Write Thread completed Writeback. Time 422.00
+Read for  address 601460: Got  memory semaphore at Time: 422.00
+B
+Memory Write Thread: Get write request from queue  at time 422.00
+Memory Write Thread: Contend for memory semaphore at time 422.00
+
+Completed Memory Read  for Address : 601460 at time 472.00
+Memory Write Thread: Granted  memory semaphore at time 472.00
+Thread: 0  Cache HIT  for Address 601460 at time 473.00
+Thread 0 completes request for memory address 601460 at time 473.00
+
+Thread 0 makes request for memory address 601464 at time 473.00
+Thread: 0  Cache HIT  for Address 601464 at time 474.00
+Thread 0 completes request for memory address 601464 at time 474.00
+
+Thread 0 makes request for memory address 601468 at time 474.00
+Thread: 0  Cache HIT  for Address 601468 at time 475.00
+Thread 0 completes request for memory address 601468 at time 475.00
+
+Thread 0 makes request for memory address 60146c at time 475.00
+Thread: 0  Cache HIT  for Address 60146c at time 476.00
+Thread 0 completes request for memory address 60146c at time 476.00
+
+Thread 0 makes request for memory address 601470 at time 476.00
+Thread: 0  Cache HIT  for Address 601470 at time 477.00
+Thread 0 completes request for memory address 601470 at time 477.00
+
+Thread 0 makes request for memory address 601474 at time 477.00
+Thread: 0  Cache HIT  for Address 601474 at time 478.00
+Thread 0 completes request for memory address 601474 at time 478.00
+
+Thread 0 makes request for memory address 601478 at time 478.00
+Thread: 0  Cache HIT  for Address 601478 at time 479.00
+Thread 0 completes request for memory address 601478 at time 479.00
+
+Thread 0 makes request for memory address 60147c at time 479.00
+Thread: 0  Cache HIT  for Address 60147c at time 480.00
+Thread 0 completes request for memory address 60147c at time 480.00
+
+Thread 0 makes request for memory address 601480 at time 480.00
+
+Cache MISS for address 601480 at time 481.00
+Flushing Dirty Block  300a2 at time 481.00
+Thread: 0  Creating Memory Request for Address 601480 at time 481.00
+In ServiceMemoryRequest: Thread: 0 Address: 601480  Time: 481.00
+In function MemoryRead at time 481.00
+Address  601480 not found in Write Queue: Time: 482.00
+Contend for memory semaphore to read memory: Time: 482.00
+Memory Write Thread completed Writeback. Time 522.00
+Read for  address 601480: Got  memory semaphore at Time: 522.00
+B
+Memory Write Thread: Get write request from queue  at time 522.00
+Memory Write Thread: Contend for memory semaphore at time 522.00
+
+Completed Memory Read  for Address : 601480 at time 572.00
+Memory Write Thread: Granted  memory semaphore at time 572.00
+Thread: 0  Cache HIT  for Address 601480 at time 573.00
+Thread 0 completes request for memory address 601480 at time 573.00
+
+Thread 0 makes request for memory address 601484 at time 573.00
+Thread: 0  Cache HIT  for Address 601484 at time 574.00
+Thread 0 completes request for memory address 601484 at time 574.00
+
+Thread 0 makes request for memory address 601488 at time 574.00
+Thread: 0  Cache HIT  for Address 601488 at time 575.00
+Thread 0 completes request for memory address 601488 at time 575.00
+
+Thread 0 makes request for memory address 60148c at time 575.00
+Thread: 0  Cache HIT  for Address 60148c at time 576.00
+Thread 0 completes request for memory address 60148c at time 576.00
+
+Thread 0 makes request for memory address 601490 at time 576.00
+Thread: 0  Cache HIT  for Address 601490 at time 577.00
+Thread 0 completes request for memory address 601490 at time 577.00
+
+Thread 0 makes request for memory address 601494 at time 577.00
+Thread: 0  Cache HIT  for Address 601494 at time 578.00
+Thread 0 completes request for memory address 601494 at time 578.00
+
+Thread 0 makes request for memory address 601498 at time 578.00
+Thread: 0  Cache HIT  for Address 601498 at time 579.00
+Thread 0 completes request for memory address 601498 at time 579.00
+
+Thread 0 makes request for memory address 60149c at time 579.00
+Thread: 0  Cache HIT  for Address 60149c at time 580.00
+Thread 0 completes request for memory address 60149c at time 580.00
+
+Thread 0 makes request for memory address 6014a0 at time 580.00
+
+Cache MISS for address 6014a0 at time 581.00
+Flushing Dirty Block  300a3 at time 581.00
+Thread: 0  Creating Memory Request for Address 6014a0 at time 581.00
+In ServiceMemoryRequest: Thread: 0 Address: 6014a0  Time: 581.00
+In function MemoryRead at time 581.00
+Address  6014a0 not found in Write Queue: Time: 582.00
+Contend for memory semaphore to read memory: Time: 582.00
+Memory Write Thread completed Writeback. Time 622.00
+Read for  address 6014a0: Got  memory semaphore at Time: 622.00
+B
+Memory Write Thread: Get write request from queue  at time 622.00
+Memory Write Thread: Contend for memory semaphore at time 622.00
+
+Completed Memory Read  for Address : 6014a0 at time 672.00
+Memory Write Thread: Granted  memory semaphore at time 672.00
+Thread: 0  Cache HIT  for Address 6014a0 at time 673.00
+Thread 0 completes request for memory address 6014a0 at time 673.00
+
+Thread 0 makes request for memory address 6014a4 at time 673.00
+Thread: 0  Cache HIT  for Address 6014a4 at time 674.00
+Thread 0 completes request for memory address 6014a4 at time 674.00
+
+Thread 0 makes request for memory address 6014a8 at time 674.00
+Thread: 0  Cache HIT  for Address 6014a8 at time 675.00
+Thread 0 completes request for memory address 6014a8 at time 675.00
+
+Thread 0 makes request for memory address 6014ac at time 675.00
+Thread: 0  Cache HIT  for Address 6014ac at time 676.00
+Thread 0 completes request for memory address 6014ac at time 676.00
+
+Thread 0 makes request for memory address 6014b0 at time 676.00
+Thread: 0  Cache HIT  for Address 6014b0 at time 677.00
+Thread 0 completes request for memory address 6014b0 at time 677.00
+
+Thread 0 makes request for memory address 6014b4 at time 677.00
+Thread: 0  Cache HIT  for Address 6014b4 at time 678.00
+Thread 0 completes request for memory address 6014b4 at time 678.00
+
+Thread 0 makes request for memory address 6014b8 at time 678.00
+Thread: 0  Cache HIT  for Address 6014b8 at time 679.00
+Thread 0 completes request for memory address 6014b8 at time 679.00
+
+Thread 0 makes request for memory address 6014bc at time 679.00
+Thread: 0  Cache HIT  for Address 6014bc at time 680.00
+Thread 0 completes request for memory address 6014bc at time 680.00
+Thread 0 completes at time 680.00
+Memory Write Thread completed Writeback. Time 722.00
+
+All Threads Completed
+Cache Size (blocks): 2	Block Size (bytes): 32 
+CPU Delay:  0.00
+
+Simulation ended  at 722
+Number of records processed from trace file: 64
+Thread: 0  Hits: 64  Misses: 8
+Total number of flushes of dirty blocks: 6
+
+Total Number of Writebacks completed: 6
+Memory Statistics:
+	Total Memory Read Time: 400.00
+	Total Memory Write Time: 300.00
+	Total Memory Idle Time: 22.00
+
+********************************************************************************
+************************* YACSIM - Normal Termination **************************
+********************************************************************************

@@ -1,0 +1,52 @@
+Source Files
+------------
+sim.c: Simulation Driver, Client, Scheduler,  Device Controller
+maketrace.c Trace file generator 
+
+Header Files
+------------
+global.h: Global definitions
+sim.h: Required by Yacsim
+
+Object Files
+------------
+yacsim.o: Simulator code
+utils.o: Precompiled helper functions
+
+Text Files:
+README -- This file
+
+
+Instructions to run simulator
+-------------------------------
+To change simlulation parameters:
+   Edit "global.h"
+
+
+To Compile and Execute:
+-----------------------
+ Trace Generator:   (Needs to be compiled and executed  when READ_FRACTION changes)
+       gcc maketrace.c  
+ Execute:  ./a.out
+
+ Simulator:
+	gcc sim.c utils.o ./yacsim.o -lm -o runme
+  Execute:    ./runme
+
+
+Notes
+-------
+In "global.h"  you will need to change the following parameters as sepcified:
+
+READ_FRACTION  -- As specified
+NUM_OUTSTANDING_REQUESTS -- As specified
+WRITE_DELAY -- As specified
+
+Do not forget to create a new trace file when READ_FRACTION changes.
+
+
+
+
+For Extra Credit
+--------------------------------------
+Change global.h as needed

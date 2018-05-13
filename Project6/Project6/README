@@ -1,0 +1,40 @@
+Source Files
+------------
+sim.c: Simulation Driver and Processor Implementation
+mem.c: Front end  Cache Controller 
+bus.c: Back end Cache Controller (template provided)
+arrayupdate.c: Trace-file generator 1
+sharedarray.c " Trace file generator 2
+
+Header Files
+------------
+global.h: Global definitions
+sim.h: Required by Yacsim
+
+Object Files
+------------
+yacsim.o: Simulator code
+utils.o: Precompiled helper functions
+	
+
+Directory:
+----------
+demos: Contains   demo programs.
+
+
+Instructions to run simulator
+-------------------------------
+To change simlulation parameters:
+
+   Edit "global.h"
+   Change NUM_PROCESSORS, MAX_DELAY as needed
+
+To Compile and Execute:
+
+ Trace Generator:   
+       gcc arrayupdate.c  // For Experiment 2 use: gcc sharedarray.c 
+ Execute:  ./a.out
+
+ Simulator:
+	gcc sim.c mem.c bus.c utils.o ./yacsim.o -lm -o runme
+  Execute:    ./runme

@@ -1,0 +1,67 @@
+int getDevice(unsigned address) {
+  
+  // Returns device number (range of 0 to 3) based on the two  LSBs of the address.
+}
+
+int  getNextRef(FILE *fp, struct tracerecord *ref) {
+ 
+  // Reads the next record from the trace file with file pointer fp into the struct pointed to by pointer ref.
+  // If EOF encountered returns FALSE else it returns TRUE.
+}
+
+double getServiceTime(struct genericQueueEntry *req) {
+
+  // Returns a double randomly drawn from a uniform distribution in the interval  [MIN_SERVICE_TIME, MAX_SERVICE_TIME].
+}
+
+
+void makeQueue(int id) {
+
+  //  Creates an empty queue with identifier equal to the integer id; id must be between 0 and 
+  // MAX_NUM_QUEUES-1.  This function must  be called before using the queue. The maximum number 
+  // of queues allowed is MAX_NUM_QUEUES which has been fixed at 10. Each queue that is created 
+  // must have a unique id.  Creating more than the maximum number of queues or reusing an id will 
+  // result in an error. 
+}
+
+
+void insertQueue(int id, struct genericQueueEntry *data) {
+ 
+  // Inserts a request into the specified queue. The argument data is a pointer to struct genericQueueEntry    
+  // that containsshould hold  information about the request. If queue  has not been created an error occurs.
+
+}
+
+struct genericQueueEntry *  getFromQueue(int id) {
+ 
+  // Returns the  request at the head of the specified queue.
+  // Deletes  the entry from the queue. 
+  //  If the queue  has not been created or the queue is empty when called a fatal error occurs.
+}
+
+
+struct genericQueueEntry *  pokeQueue(int id) {
+ 
+  // Returns the  request at the head of the specified queue  without removing the entry from the queue. 
+  //  If the queue  has not been created or the queue is empty when called a fatal error occurs.
+
+}
+
+
+int getSizeOfQueue(int id) {
+
+  // Returns the number of elements in the specified queue.
+  // If the queue  has not been created  a fatal error occurs.
+}
+
+
+void displayQueue(int id) {
+
+  // Prints out the "address" field of each entry in the specified queue.
+}
+
+struct genericQueueEntry * getLastEntry(int id, int address) {
+// Searches the queue specified by "id" for the  "address" in the address field
+// Returns a pointer to the latest request (most recently inserted) with that address in the queue, if it exists
+// Otherwise returns NULL
+}

@@ -1,0 +1,27 @@
+demo1:
+-----
+TRACE: arrayupdate.c  // CHUNKED read workload. Each processor reads  disjoint parts of the array
+TOTALSIZE:  32
+NUM_PROCESSORS: 2
+MEM_CYCLE_TIME: 100.0
+CACHE_TRANSFER_TIME: 10.0
+MAX_DELAY  10
+
+demo2:
+-----
+TRACE: sharedarray.c  // All read workload. All proecessors read the entire  array of 32 elements
+TOTALSIZE:  32
+NUM_PROCESSORS: 2
+MEM_CYCLE_TIME: 100.0
+CACHE_TRANSFER_TIME: 10.0
+MAX_DELAY  10
+
+demo3:
+-----
+TRACE: sharedarray.c  // Comment removed. Processor 0 reads and  procesor 1 writes the entire array.
+TOTALSIZE:  32
+NUM_PROCESSORS: 2
+MEM_CYCLE_TIME: 100.0
+CACHE_TRANSFER_TIME: 10.0
+MAX_DELAY  10
+

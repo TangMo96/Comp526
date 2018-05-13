@@ -1,0 +1,1402 @@
+
+********************************************************************************
+********************************************************************************
+**                                                                            **
+**                      YACSIM Version 2.0, 3/6/93                            **
+**                                                                            **
+**            Copyright 1993 by Rice University, Houston, Texas               **
+**                                                                            **
+**        Send comments to: J. Robert Jump, ECE Dept., Rice University        **
+**       P.O. Box 1892, Houston, TX 77251; (713) 527-8101; jrj@rice.edu       **
+**                                                                            **
+********************************************************************************
+********************************************************************************
+
+Base Physical Address: 0x605260
+CACHE Processor: 0  Time:  0.00
+CACHE[0][0]: Word[0]: 0
+CACHE[0][0]: Word[1]: 0
+CACHE[0][0]: Word[2]: 0
+CACHE[0][0]: Word[3]: 0
+CACHE[0][0]: Word[4]: 0
+CACHE[0][0]: Word[5]: 0
+CACHE[0][0]: Word[6]: 0
+CACHE[0][0]: Word[7]: 0
+********************************
+CACHE Processor: 1  Time:  0.00
+CACHE[1][0]: Word[0]: 0
+CACHE[1][0]: Word[1]: 0
+CACHE[1][0]: Word[2]: 0
+CACHE[1][0]: Word[3]: 0
+CACHE[1][0]: Word[4]: 0
+CACHE[1][0]: Word[5]: 0
+CACHE[1][0]: Word[6]: 0
+CACHE[1][0]: Word[7]: 0
+********************************
+Done Creating FrontEndCacheControllers 
+Done Creating Bus Snoopers
+Done Creating Bus Arbiter  Process
+Done Creating Processors
+FrontEndCacheController[0]: Activated at time  0.00
+FrontEndCacheController[1]: Activated at time  0.00
+Bus Arbiter Activated at time   0
+Processor[0]: Activated at time  0.00
+
+Processor 0 makes READ request: Address: 6010a0 Time: 0.00
+Processor[1]: Activated at time  0.00
+
+Processor 1 makes WRITE request: Address: 6010a0 Time: 0.00
+Processor 0 -- Cache Miss: Address 6010a0 Time  0.00
+Processor 0 --  Made BUS REQUEST Time  0.00
+Processor 1 -- Cache Miss: Address 6010a0 Time  0.00
+Processor 1 --  Made BUS REQUEST Time  0.00
+BusSnooper[0]: Activated at time  0.00
+BusSnooper[1]: Activated at time  0.00
+BUS GRANT: Time  1.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010a0 Time  1.00
+PFlag : FALSE   OFLag: FALSE
+Snooper 0 completed its own  BUS_RD for  address: 6010a0. State E Time 101.00
+CACHE Processor: 0  Time: 101.00
+CACHE[0][0]: Word[0]: 0
+CACHE[0][0]: Word[1]: 1
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010a0. Time: 102.00
+Processor 0 --  Cache Hit: Address 6010a0 Time 102.00 State: E
+BUS GRANT: Time 103.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RDX Address: 6010a0 Time 103.00
+Snooper 0 doing a cache-to-cache transfer for Block 0 to Processor 1 at time 103.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 0 makes READ request: Address: 6010a4 Time:113.00
+Processor 0 -- Cache Miss: Address 6010a4 Time 113.00
+Processor 0 --  Made BUS REQUEST Time 113.00
+Snooper 1 finished  BUS_RDX at time 114.00
+CACHE Processor: 1  Time: 114.00
+CACHE[1][0]: Word[0]: 0
+CACHE[1][0]: Word[1]: 1
+CACHE[1][0]: Word[2]: 2
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+Processor 1 -- Completed  cache miss for address 6010a0. Time: 116.00
+Processor 1 --  Cache Hit: Address 6010a0 Time 116.00 State: M
+CACHE Processor: 1  Time: 116.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 1
+CACHE[1][0]: Word[2]: 2
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+BUS GRANT: Time 117.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010a4 Time 117.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 117.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010a4 Time:127.00
+Processor 1 --  Cache Hit: Address 6010a4 Time 127.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010a4 Time 127.00
+Processor 1 --  Made BUS REQUEST Time 127.00
+Snooper 0 completed its own  BUS_RD for  address: 6010a4. State S Time 128.00
+CACHE Processor: 0  Time: 128.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 1
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010a4. Time: 130.00
+Processor 0 --  Cache Hit: Address 6010a4 Time 130.00 State: S
+BUS GRANT: Time 131.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010a4 Time 131.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010a4 STATE[1][0]: M  Time: 132.00
+CACHE Processor: 1  Time: 132.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010a8 Time:141.00
+Processor 0 -- Cache Miss: Address 6010a8 Time 141.00
+Processor 0 --  Made BUS REQUEST Time 141.00
+BUS GRANT: Time 142.00.  BUS_GRANT[0]: TRUE
+
+Processor 1 makes WRITE request: Address: 6010a8 Time:142.00
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010a8 Time 142.00
+Processor 1 --  Cache Hit: Address 6010a8 Time 142.00 State: M
+CACHE Processor: 1  Time: 142.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2002
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 142.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010ac Time:153.00
+Processor 1 --  Cache Hit: Address 6010ac Time 153.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010ac Time 153.00
+Processor 1 --  Made BUS REQUEST Time 153.00
+Snooper 0 completed its own  BUS_RD for  address: 6010a8. State S Time 153.00
+CACHE Processor: 0  Time: 153.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 2001
+CACHE[0][0]: Word[2]: 2002
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010a8. Time: 155.00
+Processor 0 --  Cache Hit: Address 6010a8 Time 155.00 State: S
+BUS GRANT: Time 156.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010ac Time 156.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010ac STATE[1][0]: M  Time: 157.00
+CACHE Processor: 1  Time: 157.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2002
+CACHE[1][0]: Word[3]: 2003
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010ac Time:166.00
+Processor 0 -- Cache Miss: Address 6010ac Time 166.00
+Processor 0 --  Made BUS REQUEST Time 166.00
+BUS GRANT: Time 167.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010ac Time 167.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 167.00
+
+Processor 1 makes WRITE request: Address: 6010b0 Time:167.00
+PFlag : TRUE   OFLag: TRUE
+Processor 1 --  Cache Hit: Address 6010b0 Time 167.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010b0 Time 167.00
+Processor 1 --  Made BUS REQUEST Time 167.00
+Snooper 0 completed its own  BUS_RD for  address: 6010ac. State S Time 178.00
+CACHE Processor: 0  Time: 178.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 2001
+CACHE[0][0]: Word[2]: 2002
+CACHE[0][0]: Word[3]: 2003
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010ac. Time: 180.00
+Processor 0 --  Cache Hit: Address 6010ac Time 180.00 State: S
+BUS GRANT: Time 181.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010b0 Time 181.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010b0 STATE[1][0]: M  Time: 182.00
+CACHE Processor: 1  Time: 182.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2002
+CACHE[1][0]: Word[3]: 2003
+CACHE[1][0]: Word[4]: 2004
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b0 Time:191.00
+Processor 0 -- Cache Miss: Address 6010b0 Time 191.00
+Processor 0 --  Made BUS REQUEST Time 191.00
+BUS GRANT: Time 192.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010b0 Time 192.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 192.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010b4 Time:192.00
+Processor 1 --  Cache Hit: Address 6010b4 Time 192.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010b4 Time 192.00
+Processor 1 --  Made BUS REQUEST Time 192.00
+Snooper 0 completed its own  BUS_RD for  address: 6010b0. State S Time 203.00
+CACHE Processor: 0  Time: 203.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 2001
+CACHE[0][0]: Word[2]: 2002
+CACHE[0][0]: Word[3]: 2003
+CACHE[0][0]: Word[4]: 2004
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010b0. Time: 205.00
+Processor 0 --  Cache Hit: Address 6010b0 Time 205.00 State: S
+BUS GRANT: Time 206.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010b4 Time 206.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010b4 STATE[1][0]: M  Time: 207.00
+CACHE Processor: 1  Time: 207.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2002
+CACHE[1][0]: Word[3]: 2003
+CACHE[1][0]: Word[4]: 2004
+CACHE[1][0]: Word[5]: 2005
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b4 Time:216.00
+Processor 0 -- Cache Miss: Address 6010b4 Time 216.00
+Processor 0 --  Made BUS REQUEST Time 216.00
+BUS GRANT: Time 217.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010b4 Time 217.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 217.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010b8 Time:217.00
+Processor 1 --  Cache Hit: Address 6010b8 Time 217.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010b8 Time 217.00
+Processor 1 --  Made BUS REQUEST Time 217.00
+Snooper 0 completed its own  BUS_RD for  address: 6010b4. State S Time 228.00
+CACHE Processor: 0  Time: 228.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 2001
+CACHE[0][0]: Word[2]: 2002
+CACHE[0][0]: Word[3]: 2003
+CACHE[0][0]: Word[4]: 2004
+CACHE[0][0]: Word[5]: 2005
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010b4. Time: 230.00
+Processor 0 --  Cache Hit: Address 6010b4 Time 230.00 State: S
+BUS GRANT: Time 231.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010b8 Time 231.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010b8 STATE[1][0]: M  Time: 232.00
+CACHE Processor: 1  Time: 232.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2002
+CACHE[1][0]: Word[3]: 2003
+CACHE[1][0]: Word[4]: 2004
+CACHE[1][0]: Word[5]: 2005
+CACHE[1][0]: Word[6]: 2006
+CACHE[1][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b8 Time:241.00
+Processor 0 -- Cache Miss: Address 6010b8 Time 241.00
+Processor 0 --  Made BUS REQUEST Time 241.00
+BUS GRANT: Time 242.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010b8 Time 242.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 242.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010bc Time:242.00
+Processor 1 --  Cache Hit: Address 6010bc Time 242.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010bc Time 242.00
+Processor 1 --  Made BUS REQUEST Time 242.00
+Snooper 0 completed its own  BUS_RD for  address: 6010b8. State S Time 253.00
+CACHE Processor: 0  Time: 253.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 2001
+CACHE[0][0]: Word[2]: 2002
+CACHE[0][0]: Word[3]: 2003
+CACHE[0][0]: Word[4]: 2004
+CACHE[0][0]: Word[5]: 2005
+CACHE[0][0]: Word[6]: 2006
+CACHE[0][0]: Word[7]: 7
+********************************
+Processor 0 -- Completed  cache miss for address 6010b8. Time: 255.00
+Processor 0 --  Cache Hit: Address 6010b8 Time 255.00 State: S
+BUS GRANT: Time 256.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010bc Time 256.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010bc STATE[1][0]: M  Time: 257.00
+CACHE Processor: 1  Time: 257.00
+CACHE[1][0]: Word[0]: 2000
+CACHE[1][0]: Word[1]: 2001
+CACHE[1][0]: Word[2]: 2002
+CACHE[1][0]: Word[3]: 2003
+CACHE[1][0]: Word[4]: 2004
+CACHE[1][0]: Word[5]: 2005
+CACHE[1][0]: Word[6]: 2006
+CACHE[1][0]: Word[7]: 2007
+********************************
+
+Processor 0 makes READ request: Address: 6010bc Time:266.00
+Processor 0 -- Cache Miss: Address 6010bc Time 266.00
+Processor 0 --  Made BUS REQUEST Time 266.00
+BUS GRANT: Time 267.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010bc Time 267.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 267.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010c0 Time:267.00
+Processor 1 -- Cache Miss: Address 6010c0 Time 267.00
+Processor 1 --  Made BUS REQUEST Time 267.00
+Snooper 0 completed its own  BUS_RD for  address: 6010bc. State S Time 278.00
+CACHE Processor: 0  Time: 278.00
+CACHE[0][0]: Word[0]: 2000
+CACHE[0][0]: Word[1]: 2001
+CACHE[0][0]: Word[2]: 2002
+CACHE[0][0]: Word[3]: 2003
+CACHE[0][0]: Word[4]: 2004
+CACHE[0][0]: Word[5]: 2005
+CACHE[0][0]: Word[6]: 2006
+CACHE[0][0]: Word[7]: 2007
+********************************
+Processor 0 -- Completed  cache miss for address 6010bc. Time: 280.00
+Processor 0 --  Cache Hit: Address 6010bc Time 280.00 State: S
+BUS GRANT: Time 281.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RDX Address: 6010c0 Time 281.00
+PFlag : FALSE   OFLag: FALSE
+procId: 1 gets my own BUS_RDX.  State: O Dirty/Clean?: DIRTY WRITEBACK started at Time 281.00
+
+Processor 0 makes READ request: Address: 6010c0 Time:291.00
+Processor 0 -- Cache Miss: Address 6010c0 Time 291.00
+Processor 0 --  Made BUS REQUEST Time 291.00
+Snooper 1 finished  BUS_RDX at time 481.00
+CACHE Processor: 1  Time: 481.00
+CACHE[1][0]: Word[0]: 8
+CACHE[1][0]: Word[1]: 9
+CACHE[1][0]: Word[2]: 10
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 12
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+Processor 1 -- Completed  cache miss for address 6010c0. Time: 482.00
+Processor 1 --  Cache Hit: Address 6010c0 Time 482.00 State: M
+CACHE Processor: 1  Time: 482.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 9
+CACHE[1][0]: Word[2]: 10
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 12
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+BUS GRANT: Time 483.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010c0 Time 483.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 483.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010c4 Time:493.00
+Processor 1 --  Cache Hit: Address 6010c4 Time 493.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010c4 Time 493.00
+Processor 1 --  Made BUS REQUEST Time 493.00
+Snooper 0 completed its own  BUS_RD for  address: 6010c0. State S Time 494.00
+CACHE Processor: 0  Time: 494.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010c0. Time: 496.00
+Processor 0 --  Cache Hit: Address 6010c0 Time 496.00 State: S
+BUS GRANT: Time 497.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010c4 Time 497.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010c4 STATE[1][0]: M  Time: 498.00
+CACHE Processor: 1  Time: 498.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 10
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 12
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010c4 Time:507.00
+Processor 0 -- Cache Miss: Address 6010c4 Time 507.00
+Processor 0 --  Made BUS REQUEST Time 507.00
+BUS GRANT: Time 508.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010c4 Time 508.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 508.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010c8 Time:508.00
+Processor 1 --  Cache Hit: Address 6010c8 Time 508.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010c8 Time 508.00
+Processor 1 --  Made BUS REQUEST Time 508.00
+Snooper 0 completed its own  BUS_RD for  address: 6010c4. State S Time 519.00
+CACHE Processor: 0  Time: 519.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010c4. Time: 521.00
+Processor 0 --  Cache Hit: Address 6010c4 Time 521.00 State: S
+BUS GRANT: Time 522.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010c8 Time 522.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010c8 STATE[1][0]: M  Time: 523.00
+CACHE Processor: 1  Time: 523.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 2010
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 12
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010c8 Time:532.00
+Processor 0 -- Cache Miss: Address 6010c8 Time 532.00
+Processor 0 --  Made BUS REQUEST Time 532.00
+BUS GRANT: Time 533.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010c8 Time 533.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 533.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010cc Time:533.00
+Processor 1 --  Cache Hit: Address 6010cc Time 533.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010cc Time 533.00
+Processor 1 --  Made BUS REQUEST Time 533.00
+Snooper 0 completed its own  BUS_RD for  address: 6010c8. State S Time 544.00
+CACHE Processor: 0  Time: 544.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 2010
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010c8. Time: 546.00
+Processor 0 --  Cache Hit: Address 6010c8 Time 546.00 State: S
+BUS GRANT: Time 547.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010cc Time 547.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010cc STATE[1][0]: M  Time: 548.00
+CACHE Processor: 1  Time: 548.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 2010
+CACHE[1][0]: Word[3]: 2011
+CACHE[1][0]: Word[4]: 12
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010cc Time:557.00
+Processor 0 -- Cache Miss: Address 6010cc Time 557.00
+Processor 0 --  Made BUS REQUEST Time 557.00
+BUS GRANT: Time 558.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010cc Time 558.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 558.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010d0 Time:558.00
+Processor 1 --  Cache Hit: Address 6010d0 Time 558.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010d0 Time 558.00
+Processor 1 --  Made BUS REQUEST Time 558.00
+Snooper 0 completed its own  BUS_RD for  address: 6010cc. State S Time 569.00
+CACHE Processor: 0  Time: 569.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 2010
+CACHE[0][0]: Word[3]: 2011
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010cc. Time: 571.00
+Processor 0 --  Cache Hit: Address 6010cc Time 571.00 State: S
+BUS GRANT: Time 572.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010d0 Time 572.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010d0 STATE[1][0]: M  Time: 573.00
+CACHE Processor: 1  Time: 573.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 2010
+CACHE[1][0]: Word[3]: 2011
+CACHE[1][0]: Word[4]: 2012
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d0 Time:582.00
+Processor 0 -- Cache Miss: Address 6010d0 Time 582.00
+Processor 0 --  Made BUS REQUEST Time 582.00
+BUS GRANT: Time 583.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010d0 Time 583.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 583.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010d4 Time:583.00
+Processor 1 --  Cache Hit: Address 6010d4 Time 583.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010d4 Time 583.00
+Processor 1 --  Made BUS REQUEST Time 583.00
+Snooper 0 completed its own  BUS_RD for  address: 6010d0. State S Time 594.00
+CACHE Processor: 0  Time: 594.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 2010
+CACHE[0][0]: Word[3]: 2011
+CACHE[0][0]: Word[4]: 2012
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010d0. Time: 596.00
+Processor 0 --  Cache Hit: Address 6010d0 Time 596.00 State: S
+BUS GRANT: Time 597.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010d4 Time 597.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010d4 STATE[1][0]: M  Time: 598.00
+CACHE Processor: 1  Time: 598.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 2010
+CACHE[1][0]: Word[3]: 2011
+CACHE[1][0]: Word[4]: 2012
+CACHE[1][0]: Word[5]: 2013
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d4 Time:607.00
+Processor 0 -- Cache Miss: Address 6010d4 Time 607.00
+Processor 0 --  Made BUS REQUEST Time 607.00
+BUS GRANT: Time 608.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010d4 Time 608.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 608.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010d8 Time:608.00
+Processor 1 --  Cache Hit: Address 6010d8 Time 608.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010d8 Time 608.00
+Processor 1 --  Made BUS REQUEST Time 608.00
+Snooper 0 completed its own  BUS_RD for  address: 6010d4. State S Time 619.00
+CACHE Processor: 0  Time: 619.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 2010
+CACHE[0][0]: Word[3]: 2011
+CACHE[0][0]: Word[4]: 2012
+CACHE[0][0]: Word[5]: 2013
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010d4. Time: 621.00
+Processor 0 --  Cache Hit: Address 6010d4 Time 621.00 State: S
+BUS GRANT: Time 622.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010d8 Time 622.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010d8 STATE[1][0]: M  Time: 623.00
+CACHE Processor: 1  Time: 623.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 2010
+CACHE[1][0]: Word[3]: 2011
+CACHE[1][0]: Word[4]: 2012
+CACHE[1][0]: Word[5]: 2013
+CACHE[1][0]: Word[6]: 2014
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d8 Time:632.00
+Processor 0 -- Cache Miss: Address 6010d8 Time 632.00
+Processor 0 --  Made BUS REQUEST Time 632.00
+BUS GRANT: Time 633.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010d8 Time 633.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 633.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010dc Time:633.00
+Processor 1 --  Cache Hit: Address 6010dc Time 633.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010dc Time 633.00
+Processor 1 --  Made BUS REQUEST Time 633.00
+Snooper 0 completed its own  BUS_RD for  address: 6010d8. State S Time 644.00
+CACHE Processor: 0  Time: 644.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 2010
+CACHE[0][0]: Word[3]: 2011
+CACHE[0][0]: Word[4]: 2012
+CACHE[0][0]: Word[5]: 2013
+CACHE[0][0]: Word[6]: 2014
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 0 -- Completed  cache miss for address 6010d8. Time: 646.00
+Processor 0 --  Cache Hit: Address 6010d8 Time 646.00 State: S
+BUS GRANT: Time 647.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010dc Time 647.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010dc STATE[1][0]: M  Time: 648.00
+CACHE Processor: 1  Time: 648.00
+CACHE[1][0]: Word[0]: 2008
+CACHE[1][0]: Word[1]: 2009
+CACHE[1][0]: Word[2]: 2010
+CACHE[1][0]: Word[3]: 2011
+CACHE[1][0]: Word[4]: 2012
+CACHE[1][0]: Word[5]: 2013
+CACHE[1][0]: Word[6]: 2014
+CACHE[1][0]: Word[7]: 2015
+********************************
+
+Processor 0 makes READ request: Address: 6010dc Time:657.00
+Processor 0 -- Cache Miss: Address 6010dc Time 657.00
+Processor 0 --  Made BUS REQUEST Time 657.00
+BUS GRANT: Time 658.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010dc Time 658.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 658.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010e0 Time:658.00
+Processor 1 -- Cache Miss: Address 6010e0 Time 658.00
+Processor 1 --  Made BUS REQUEST Time 658.00
+Snooper 0 completed its own  BUS_RD for  address: 6010dc. State S Time 669.00
+CACHE Processor: 0  Time: 669.00
+CACHE[0][0]: Word[0]: 2008
+CACHE[0][0]: Word[1]: 2009
+CACHE[0][0]: Word[2]: 2010
+CACHE[0][0]: Word[3]: 2011
+CACHE[0][0]: Word[4]: 2012
+CACHE[0][0]: Word[5]: 2013
+CACHE[0][0]: Word[6]: 2014
+CACHE[0][0]: Word[7]: 2015
+********************************
+Processor 0 -- Completed  cache miss for address 6010dc. Time: 671.00
+Processor 0 --  Cache Hit: Address 6010dc Time 671.00 State: S
+BUS GRANT: Time 672.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RDX Address: 6010e0 Time 672.00
+PFlag : FALSE   OFLag: FALSE
+procId: 1 gets my own BUS_RDX.  State: O Dirty/Clean?: DIRTY WRITEBACK started at Time 672.00
+
+Processor 0 makes READ request: Address: 6010e0 Time:682.00
+Processor 0 -- Cache Miss: Address 6010e0 Time 682.00
+Processor 0 --  Made BUS REQUEST Time 682.00
+Snooper 1 finished  BUS_RDX at time 872.00
+CACHE Processor: 1  Time: 872.00
+CACHE[1][0]: Word[0]: 16
+CACHE[1][0]: Word[1]: 17
+CACHE[1][0]: Word[2]: 18
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+Processor 1 -- Completed  cache miss for address 6010e0. Time: 873.00
+Processor 1 --  Cache Hit: Address 6010e0 Time 873.00 State: M
+CACHE Processor: 1  Time: 873.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 17
+CACHE[1][0]: Word[2]: 18
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+BUS GRANT: Time 874.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010e0 Time 874.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 874.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010e4 Time:884.00
+Processor 1 --  Cache Hit: Address 6010e4 Time 884.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010e4 Time 884.00
+Processor 1 --  Made BUS REQUEST Time 884.00
+Snooper 0 completed its own  BUS_RD for  address: 6010e0. State S Time 885.00
+CACHE Processor: 0  Time: 885.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 17
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010e0. Time: 887.00
+Processor 0 --  Cache Hit: Address 6010e0 Time 887.00 State: S
+BUS GRANT: Time 888.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010e4 Time 888.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010e4 STATE[1][0]: M  Time: 889.00
+CACHE Processor: 1  Time: 889.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 18
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010e4 Time:898.00
+Processor 0 -- Cache Miss: Address 6010e4 Time 898.00
+Processor 0 --  Made BUS REQUEST Time 898.00
+BUS GRANT: Time 899.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010e4 Time 899.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 899.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010e8 Time:899.00
+Processor 1 --  Cache Hit: Address 6010e8 Time 899.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010e8 Time 899.00
+Processor 1 --  Made BUS REQUEST Time 899.00
+Snooper 0 completed its own  BUS_RD for  address: 6010e4. State S Time 910.00
+CACHE Processor: 0  Time: 910.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010e4. Time: 912.00
+Processor 0 --  Cache Hit: Address 6010e4 Time 912.00 State: S
+BUS GRANT: Time 913.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010e8 Time 913.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010e8 STATE[1][0]: M  Time: 914.00
+CACHE Processor: 1  Time: 914.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 2018
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010e8 Time:923.00
+Processor 0 -- Cache Miss: Address 6010e8 Time 923.00
+Processor 0 --  Made BUS REQUEST Time 923.00
+BUS GRANT: Time 924.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010e8 Time 924.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 924.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010ec Time:924.00
+Processor 1 --  Cache Hit: Address 6010ec Time 924.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010ec Time 924.00
+Processor 1 --  Made BUS REQUEST Time 924.00
+Snooper 0 completed its own  BUS_RD for  address: 6010e8. State S Time 935.00
+CACHE Processor: 0  Time: 935.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 2018
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010e8. Time: 937.00
+Processor 0 --  Cache Hit: Address 6010e8 Time 937.00 State: S
+BUS GRANT: Time 938.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010ec Time 938.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010ec STATE[1][0]: M  Time: 939.00
+CACHE Processor: 1  Time: 939.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 2018
+CACHE[1][0]: Word[3]: 2019
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010ec Time:948.00
+Processor 0 -- Cache Miss: Address 6010ec Time 948.00
+Processor 0 --  Made BUS REQUEST Time 948.00
+BUS GRANT: Time 949.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010ec Time 949.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 949.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010f0 Time:949.00
+Processor 1 --  Cache Hit: Address 6010f0 Time 949.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010f0 Time 949.00
+Processor 1 --  Made BUS REQUEST Time 949.00
+Snooper 0 completed its own  BUS_RD for  address: 6010ec. State S Time 960.00
+CACHE Processor: 0  Time: 960.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 2018
+CACHE[0][0]: Word[3]: 2019
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010ec. Time: 962.00
+Processor 0 --  Cache Hit: Address 6010ec Time 962.00 State: S
+BUS GRANT: Time 963.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010f0 Time 963.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010f0 STATE[1][0]: M  Time: 964.00
+CACHE Processor: 1  Time: 964.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 2018
+CACHE[1][0]: Word[3]: 2019
+CACHE[1][0]: Word[4]: 2020
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f0 Time:973.00
+Processor 0 -- Cache Miss: Address 6010f0 Time 973.00
+Processor 0 --  Made BUS REQUEST Time 973.00
+BUS GRANT: Time 974.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010f0 Time 974.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 974.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010f4 Time:974.00
+Processor 1 --  Cache Hit: Address 6010f4 Time 974.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010f4 Time 974.00
+Processor 1 --  Made BUS REQUEST Time 974.00
+Snooper 0 completed its own  BUS_RD for  address: 6010f0. State S Time 985.00
+CACHE Processor: 0  Time: 985.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 2018
+CACHE[0][0]: Word[3]: 2019
+CACHE[0][0]: Word[4]: 2020
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010f0. Time: 987.00
+Processor 0 --  Cache Hit: Address 6010f0 Time 987.00 State: S
+BUS GRANT: Time 988.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010f4 Time 988.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010f4 STATE[1][0]: M  Time: 989.00
+CACHE Processor: 1  Time: 989.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 2018
+CACHE[1][0]: Word[3]: 2019
+CACHE[1][0]: Word[4]: 2020
+CACHE[1][0]: Word[5]: 2021
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f4 Time:998.00
+Processor 0 -- Cache Miss: Address 6010f4 Time 998.00
+Processor 0 --  Made BUS REQUEST Time 998.00
+BUS GRANT: Time 999.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010f4 Time 999.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 999.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010f8 Time:999.00
+Processor 1 --  Cache Hit: Address 6010f8 Time 999.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010f8 Time 999.00
+Processor 1 --  Made BUS REQUEST Time 999.00
+Snooper 0 completed its own  BUS_RD for  address: 6010f4. State S Time 1010.00
+CACHE Processor: 0  Time: 1010.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 2018
+CACHE[0][0]: Word[3]: 2019
+CACHE[0][0]: Word[4]: 2020
+CACHE[0][0]: Word[5]: 2021
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010f4. Time: 1012.00
+Processor 0 --  Cache Hit: Address 6010f4 Time 1012.00 State: S
+BUS GRANT: Time 1013.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010f8 Time 1013.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010f8 STATE[1][0]: M  Time: 1014.00
+CACHE Processor: 1  Time: 1014.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 2018
+CACHE[1][0]: Word[3]: 2019
+CACHE[1][0]: Word[4]: 2020
+CACHE[1][0]: Word[5]: 2021
+CACHE[1][0]: Word[6]: 2022
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f8 Time:1023.00
+Processor 0 -- Cache Miss: Address 6010f8 Time 1023.00
+Processor 0 --  Made BUS REQUEST Time 1023.00
+BUS GRANT: Time 1024.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010f8 Time 1024.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1024.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 6010fc Time:1024.00
+Processor 1 --  Cache Hit: Address 6010fc Time 1024.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 6010fc Time 1024.00
+Processor 1 --  Made BUS REQUEST Time 1024.00
+Snooper 0 completed its own  BUS_RD for  address: 6010f8. State S Time 1035.00
+CACHE Processor: 0  Time: 1035.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 2018
+CACHE[0][0]: Word[3]: 2019
+CACHE[0][0]: Word[4]: 2020
+CACHE[0][0]: Word[5]: 2021
+CACHE[0][0]: Word[6]: 2022
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 0 -- Completed  cache miss for address 6010f8. Time: 1037.00
+Processor 0 --  Cache Hit: Address 6010f8 Time 1037.00 State: S
+BUS GRANT: Time 1038.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 6010fc Time 1038.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 6010fc STATE[1][0]: M  Time: 1039.00
+CACHE Processor: 1  Time: 1039.00
+CACHE[1][0]: Word[0]: 2016
+CACHE[1][0]: Word[1]: 2017
+CACHE[1][0]: Word[2]: 2018
+CACHE[1][0]: Word[3]: 2019
+CACHE[1][0]: Word[4]: 2020
+CACHE[1][0]: Word[5]: 2021
+CACHE[1][0]: Word[6]: 2022
+CACHE[1][0]: Word[7]: 2023
+********************************
+
+Processor 0 makes READ request: Address: 6010fc Time:1048.00
+Processor 0 -- Cache Miss: Address 6010fc Time 1048.00
+Processor 0 --  Made BUS REQUEST Time 1048.00
+BUS GRANT: Time 1049.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 6010fc Time 1049.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1049.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 601100 Time:1049.00
+Processor 1 -- Cache Miss: Address 601100 Time 1049.00
+Processor 1 --  Made BUS REQUEST Time 1049.00
+Snooper 0 completed its own  BUS_RD for  address: 6010fc. State S Time 1060.00
+CACHE Processor: 0  Time: 1060.00
+CACHE[0][0]: Word[0]: 2016
+CACHE[0][0]: Word[1]: 2017
+CACHE[0][0]: Word[2]: 2018
+CACHE[0][0]: Word[3]: 2019
+CACHE[0][0]: Word[4]: 2020
+CACHE[0][0]: Word[5]: 2021
+CACHE[0][0]: Word[6]: 2022
+CACHE[0][0]: Word[7]: 2023
+********************************
+Processor 0 -- Completed  cache miss for address 6010fc. Time: 1062.00
+Processor 0 --  Cache Hit: Address 6010fc Time 1062.00 State: S
+BUS GRANT: Time 1063.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RDX Address: 601100 Time 1063.00
+PFlag : FALSE   OFLag: FALSE
+procId: 1 gets my own BUS_RDX.  State: O Dirty/Clean?: DIRTY WRITEBACK started at Time 1063.00
+
+Processor 0 makes READ request: Address: 601100 Time:1073.00
+Processor 0 -- Cache Miss: Address 601100 Time 1073.00
+Processor 0 --  Made BUS REQUEST Time 1073.00
+Snooper 1 finished  BUS_RDX at time 1263.00
+CACHE Processor: 1  Time: 1263.00
+CACHE[1][0]: Word[0]: 24
+CACHE[1][0]: Word[1]: 25
+CACHE[1][0]: Word[2]: 26
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 28
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+Processor 1 -- Completed  cache miss for address 601100. Time: 1264.00
+Processor 1 --  Cache Hit: Address 601100 Time 1264.00 State: M
+CACHE Processor: 1  Time: 1264.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 25
+CACHE[1][0]: Word[2]: 26
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 28
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+BUS GRANT: Time 1265.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 601100 Time 1265.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1265.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 601104 Time:1275.00
+Processor 1 --  Cache Hit: Address 601104 Time 1275.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 601104 Time 1275.00
+Processor 1 --  Made BUS REQUEST Time 1275.00
+Snooper 0 completed its own  BUS_RD for  address: 601100. State S Time 1276.00
+CACHE Processor: 0  Time: 1276.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 601100. Time: 1278.00
+Processor 0 --  Cache Hit: Address 601100 Time 1278.00 State: S
+BUS GRANT: Time 1279.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 601104 Time 1279.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 601104 STATE[1][0]: M  Time: 1280.00
+CACHE Processor: 1  Time: 1280.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 26
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 28
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601104 Time:1289.00
+Processor 0 -- Cache Miss: Address 601104 Time 1289.00
+Processor 0 --  Made BUS REQUEST Time 1289.00
+BUS GRANT: Time 1290.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 601104 Time 1290.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1290.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 601108 Time:1290.00
+Processor 1 --  Cache Hit: Address 601108 Time 1290.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 601108 Time 1290.00
+Processor 1 --  Made BUS REQUEST Time 1290.00
+Snooper 0 completed its own  BUS_RD for  address: 601104. State S Time 1301.00
+CACHE Processor: 0  Time: 1301.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 601104. Time: 1303.00
+Processor 0 --  Cache Hit: Address 601104 Time 1303.00 State: S
+BUS GRANT: Time 1304.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 601108 Time 1304.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 601108 STATE[1][0]: M  Time: 1305.00
+CACHE Processor: 1  Time: 1305.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 2026
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 28
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601108 Time:1314.00
+Processor 0 -- Cache Miss: Address 601108 Time 1314.00
+Processor 0 --  Made BUS REQUEST Time 1314.00
+BUS GRANT: Time 1315.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 601108 Time 1315.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1315.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 60110c Time:1315.00
+Processor 1 --  Cache Hit: Address 60110c Time 1315.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 60110c Time 1315.00
+Processor 1 --  Made BUS REQUEST Time 1315.00
+Snooper 0 completed its own  BUS_RD for  address: 601108. State S Time 1326.00
+CACHE Processor: 0  Time: 1326.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 2026
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 601108. Time: 1328.00
+Processor 0 --  Cache Hit: Address 601108 Time 1328.00 State: S
+BUS GRANT: Time 1329.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 60110c Time 1329.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 60110c STATE[1][0]: M  Time: 1330.00
+CACHE Processor: 1  Time: 1330.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 2026
+CACHE[1][0]: Word[3]: 2027
+CACHE[1][0]: Word[4]: 28
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 60110c Time:1339.00
+Processor 0 -- Cache Miss: Address 60110c Time 1339.00
+Processor 0 --  Made BUS REQUEST Time 1339.00
+BUS GRANT: Time 1340.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 60110c Time 1340.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1340.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 601110 Time:1340.00
+Processor 1 --  Cache Hit: Address 601110 Time 1340.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 601110 Time 1340.00
+Processor 1 --  Made BUS REQUEST Time 1340.00
+Snooper 0 completed its own  BUS_RD for  address: 60110c. State S Time 1351.00
+CACHE Processor: 0  Time: 1351.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 2026
+CACHE[0][0]: Word[3]: 2027
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 60110c. Time: 1353.00
+Processor 0 --  Cache Hit: Address 60110c Time 1353.00 State: S
+BUS GRANT: Time 1354.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 601110 Time 1354.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 601110 STATE[1][0]: M  Time: 1355.00
+CACHE Processor: 1  Time: 1355.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 2026
+CACHE[1][0]: Word[3]: 2027
+CACHE[1][0]: Word[4]: 2028
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601110 Time:1364.00
+Processor 0 -- Cache Miss: Address 601110 Time 1364.00
+Processor 0 --  Made BUS REQUEST Time 1364.00
+BUS GRANT: Time 1365.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 601110 Time 1365.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1365.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 601114 Time:1365.00
+Processor 1 --  Cache Hit: Address 601114 Time 1365.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 601114 Time 1365.00
+Processor 1 --  Made BUS REQUEST Time 1365.00
+Snooper 0 completed its own  BUS_RD for  address: 601110. State S Time 1376.00
+CACHE Processor: 0  Time: 1376.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 2026
+CACHE[0][0]: Word[3]: 2027
+CACHE[0][0]: Word[4]: 2028
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 601110. Time: 1378.00
+Processor 0 --  Cache Hit: Address 601110 Time 1378.00 State: S
+BUS GRANT: Time 1379.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 601114 Time 1379.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 601114 STATE[1][0]: M  Time: 1380.00
+CACHE Processor: 1  Time: 1380.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 2026
+CACHE[1][0]: Word[3]: 2027
+CACHE[1][0]: Word[4]: 2028
+CACHE[1][0]: Word[5]: 2029
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601114 Time:1389.00
+Processor 0 -- Cache Miss: Address 601114 Time 1389.00
+Processor 0 --  Made BUS REQUEST Time 1389.00
+BUS GRANT: Time 1390.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 601114 Time 1390.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1390.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 601118 Time:1390.00
+Processor 1 --  Cache Hit: Address 601118 Time 1390.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 601118 Time 1390.00
+Processor 1 --  Made BUS REQUEST Time 1390.00
+Snooper 0 completed its own  BUS_RD for  address: 601114. State S Time 1401.00
+CACHE Processor: 0  Time: 1401.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 2026
+CACHE[0][0]: Word[3]: 2027
+CACHE[0][0]: Word[4]: 2028
+CACHE[0][0]: Word[5]: 2029
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 601114. Time: 1403.00
+Processor 0 --  Cache Hit: Address 601114 Time 1403.00 State: S
+BUS GRANT: Time 1404.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 601118 Time 1404.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 601118 STATE[1][0]: M  Time: 1405.00
+CACHE Processor: 1  Time: 1405.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 2026
+CACHE[1][0]: Word[3]: 2027
+CACHE[1][0]: Word[4]: 2028
+CACHE[1][0]: Word[5]: 2029
+CACHE[1][0]: Word[6]: 2030
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601118 Time:1414.00
+Processor 0 -- Cache Miss: Address 601118 Time 1414.00
+Processor 0 --  Made BUS REQUEST Time 1414.00
+BUS GRANT: Time 1415.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 601118 Time 1415.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1415.00
+PFlag : TRUE   OFLag: TRUE
+
+Processor 1 makes WRITE request: Address: 60111c Time:1415.00
+Processor 1 --  Cache Hit: Address 60111c Time 1415.00 State: O
+Processor  1: Need UPGRADE from State O
+Address 60111c Time 1415.00
+Processor 1 --  Made BUS REQUEST Time 1415.00
+Snooper 0 completed its own  BUS_RD for  address: 601118. State S Time 1426.00
+CACHE Processor: 0  Time: 1426.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 2026
+CACHE[0][0]: Word[3]: 2027
+CACHE[0][0]: Word[4]: 2028
+CACHE[0][0]: Word[5]: 2029
+CACHE[0][0]: Word[6]: 2030
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 0 -- Completed  cache miss for address 601118. Time: 1428.00
+Processor 0 --  Cache Hit: Address 601118 Time 1428.00 State: S
+BUS GRANT: Time 1429.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- Received BUS GRANT.  Broadcast COMMAND: INV Address: 60111c Time 1429.00
+PFlag : TRUE   OFLag: FALSE
+Processor  1: Completed UPGRADE -- Address: 60111c STATE[1][0]: M  Time: 1430.00
+CACHE Processor: 1  Time: 1430.00
+CACHE[1][0]: Word[0]: 2024
+CACHE[1][0]: Word[1]: 2025
+CACHE[1][0]: Word[2]: 2026
+CACHE[1][0]: Word[3]: 2027
+CACHE[1][0]: Word[4]: 2028
+CACHE[1][0]: Word[5]: 2029
+CACHE[1][0]: Word[6]: 2030
+CACHE[1][0]: Word[7]: 2031
+********************************
+
+Processor 0 makes READ request: Address: 60111c Time:1439.00
+Processor 0 -- Cache Miss: Address 60111c Time 1439.00
+Processor 0 --  Made BUS REQUEST Time 1439.00
+BUS GRANT: Time 1440.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- Received BUS GRANT.  Broadcast COMMAND: BUS_RD Address: 60111c Time 1440.00
+Snooper 1 doing a cache-to-cache transfer for Block 0 to Processor 0 at time 1440.00
+PFlag : TRUE   OFLag: TRUE
+Snooper 0 completed its own  BUS_RD for  address: 60111c. State S Time 1451.00
+CACHE Processor: 0  Time: 1451.00
+CACHE[0][0]: Word[0]: 2024
+CACHE[0][0]: Word[1]: 2025
+CACHE[0][0]: Word[2]: 2026
+CACHE[0][0]: Word[3]: 2027
+CACHE[0][0]: Word[4]: 2028
+CACHE[0][0]: Word[5]: 2029
+CACHE[0][0]: Word[6]: 2030
+CACHE[0][0]: Word[7]: 2031
+********************************
+Processor 0 -- Completed  cache miss for address 60111c. Time: 1453.00
+Processor 0 --  Cache Hit: Address 60111c Time 1453.00 State: S
+Num Processors: 2	Delay: 10
+Simulation ended  at 1464.00
+ 
+ ----------  Processor Level Statistics -----------------
+
+Processor: 0	READ HITS: 32	READ MISSES: 32	WRITE HITS: 0	UPGRADES: 0	 SILENT UPGRADES: 0	CONVERTED UPGRADES: 0	WRITE MISSES: 0	WRITEBACKS: 0	Time: 1464.00
+
+Processor: 1	READ HITS: 0	READ MISSES: 0	WRITE HITS: 5	UPGRADES: 27	 SILENT UPGRADES: 0	CONVERTED UPGRADES: 0	WRITE MISSES: 4	WRITEBACKS: 3	Time: 1464.00

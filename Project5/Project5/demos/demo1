@@ -1,0 +1,726 @@
+
+********************************************************************************
+********************************************************************************
+**                                                                            **
+**                      YACSIM Version 2.0, 3/6/93                            **
+**                                                                            **
+**            Copyright 1993 by Rice University, Houston, Texas               **
+**                                                                            **
+**        Send comments to: J. Robert Jump, ECE Dept., Rice University        **
+**       P.O. Box 1892, Houston, TX 77251; (713) 527-8101; jrj@rice.edu       **
+**                                                                            **
+********************************************************************************
+********************************************************************************
+
+Base Physical Address: 0x605240
+CACHE Processor: 0  Time:  0.00
+CACHE[0][0]: Word[0]: 0
+CACHE[0][0]: Word[1]: 0
+CACHE[0][0]: Word[2]: 0
+CACHE[0][0]: Word[3]: 0
+CACHE[0][0]: Word[4]: 0
+CACHE[0][0]: Word[5]: 0
+CACHE[0][0]: Word[6]: 0
+CACHE[0][0]: Word[7]: 0
+********************************
+Done Creating FrontEndCacheControllers 
+Done Creating Bus Snoopers
+Done Creating Bus Arbiter  Process
+Done Creating Processors
+FrontEndCacheController[0]: Activated at time  0.00
+Bus Arbiter Activated at time   0
+Processor[0]: Activated at time  0.00
+
+Processor 0 makes READ request: Address: 6010a0 Time: 0.00
+Processor 0 -- Cache Miss: Address 6010a0 Time  0.00
+Processor 0 --  BUS REQUEST Time  0.00
+BusSnooper[0]: Activated at time  0.00
+BUS GRANT: Time  1.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time  1.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010a0  Time  1.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time  1.00
+Snooper 0 finished  BUS_RD at time 11.00
+CACHE Processor: 0  Time: 11.00
+CACHE[0][0]: Word[0]: 0
+CACHE[0][0]: Word[1]: 1
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 12.00
+Processor 0 -- Completed  cache miss for address 6010a0. Time: 12.00
+Processor 0 --  Cache Hit: Address 6010a0 Time 12.00
+
+Processor 0 makes WRITE request: Address: 6010a0 Time:13.00
+Processor 0 --  Cache Hit: Address 6010a0 Time 13.00
+Processor  0: Need UPGRADE -- Address 6010a0 Time 13.00
+Processor 0 --  BUS REQUEST Time 13.00
+BUS GRANT: Time 14.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 14.00
+Processor 0 -- BROADCAST Command INV  Address 6010a0  Time 14.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 14.00
+Snooper 0 handled INVALIDATE from processor 0 at time 14.00
+Snooper 0 Done with my own INV request. Time: 15.00
+Processor  0: Completed UPGRADE -- Address: 6010a0 STATE[0][0]: M  Time: 15.00
+CACHE Processor: 0  Time: 15.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010a4 Time:15.00
+Processor 0 --  Cache Hit: Address 6010a4 Time 15.00
+
+Processor 0 makes WRITE request: Address: 6010a4 Time:16.00
+Processor 0 --  Cache Hit: Address 6010a4 Time 16.00
+procId 0	Write Hits: 1 Address: 6010a4
+CACHE Processor: 0  Time: 16.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010a8 Time:17.00
+Processor 0 --  Cache Hit: Address 6010a8 Time 17.00
+
+Processor 0 makes WRITE request: Address: 6010a8 Time:18.00
+Processor 0 --  Cache Hit: Address 6010a8 Time 18.00
+procId 0	Write Hits: 2 Address: 6010a8
+CACHE Processor: 0  Time: 18.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010ac Time:19.00
+Processor 0 --  Cache Hit: Address 6010ac Time 19.00
+
+Processor 0 makes WRITE request: Address: 6010ac Time:20.00
+Processor 0 --  Cache Hit: Address 6010ac Time 20.00
+procId 0	Write Hits: 3 Address: 6010ac
+CACHE Processor: 0  Time: 20.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b0 Time:21.00
+Processor 0 --  Cache Hit: Address 6010b0 Time 21.00
+
+Processor 0 makes WRITE request: Address: 6010b0 Time:22.00
+Processor 0 --  Cache Hit: Address 6010b0 Time 22.00
+procId 0	Write Hits: 4 Address: 6010b0
+CACHE Processor: 0  Time: 22.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b4 Time:23.00
+Processor 0 --  Cache Hit: Address 6010b4 Time 23.00
+
+Processor 0 makes WRITE request: Address: 6010b4 Time:24.00
+Processor 0 --  Cache Hit: Address 6010b4 Time 24.00
+procId 0	Write Hits: 5 Address: 6010b4
+CACHE Processor: 0  Time: 24.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 1005
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b8 Time:25.00
+Processor 0 --  Cache Hit: Address 6010b8 Time 25.00
+
+Processor 0 makes WRITE request: Address: 6010b8 Time:26.00
+Processor 0 --  Cache Hit: Address 6010b8 Time 26.00
+procId 0	Write Hits: 6 Address: 6010b8
+CACHE Processor: 0  Time: 26.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 1005
+CACHE[0][0]: Word[6]: 1006
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010bc Time:27.00
+Processor 0 --  Cache Hit: Address 6010bc Time 27.00
+
+Processor 0 makes WRITE request: Address: 6010bc Time:28.00
+Processor 0 --  Cache Hit: Address 6010bc Time 28.00
+procId 0	Write Hits: 7 Address: 6010bc
+CACHE Processor: 0  Time: 28.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 1005
+CACHE[0][0]: Word[6]: 1006
+CACHE[0][0]: Word[7]: 1007
+********************************
+
+Processor 0 makes READ request: Address: 6010c0 Time:29.00
+Processor 0 -- Cache Miss: Address 6010c0 Time 29.00
+Processor 0 --  BUS REQUEST Time 29.00
+BUS GRANT: Time 30.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 30.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010c0  Time 30.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 30.00
+CACHE[0][0].STATE: M
+Snooper 0 finished  BUS_RD at time 50.00
+CACHE Processor: 0  Time: 50.00
+CACHE[0][0]: Word[0]: 8
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 51.00
+Processor 0 -- Completed  cache miss for address 6010c0. Time: 51.00
+Processor 0 --  Cache Hit: Address 6010c0 Time 51.00
+
+Processor 0 makes WRITE request: Address: 6010c0 Time:52.00
+Processor 0 --  Cache Hit: Address 6010c0 Time 52.00
+Processor  0: Need UPGRADE -- Address 6010c0 Time 52.00
+Processor 0 --  BUS REQUEST Time 52.00
+BUS GRANT: Time 53.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 53.00
+Processor 0 -- BROADCAST Command INV  Address 6010c0  Time 53.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 53.00
+Snooper 0 handled INVALIDATE from processor 0 at time 53.00
+Snooper 0 Done with my own INV request. Time: 54.00
+Processor  0: Completed UPGRADE -- Address: 6010c0 STATE[0][0]: M  Time: 54.00
+CACHE Processor: 0  Time: 54.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010c4 Time:54.00
+Processor 0 --  Cache Hit: Address 6010c4 Time 54.00
+
+Processor 0 makes WRITE request: Address: 6010c4 Time:55.00
+Processor 0 --  Cache Hit: Address 6010c4 Time 55.00
+procId 0	Write Hits: 8 Address: 6010c4
+CACHE Processor: 0  Time: 55.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010c8 Time:56.00
+Processor 0 --  Cache Hit: Address 6010c8 Time 56.00
+
+Processor 0 makes WRITE request: Address: 6010c8 Time:57.00
+Processor 0 --  Cache Hit: Address 6010c8 Time 57.00
+procId 0	Write Hits: 9 Address: 6010c8
+CACHE Processor: 0  Time: 57.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010cc Time:58.00
+Processor 0 --  Cache Hit: Address 6010cc Time 58.00
+
+Processor 0 makes WRITE request: Address: 6010cc Time:59.00
+Processor 0 --  Cache Hit: Address 6010cc Time 59.00
+procId 0	Write Hits: 10 Address: 6010cc
+CACHE Processor: 0  Time: 59.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d0 Time:60.00
+Processor 0 --  Cache Hit: Address 6010d0 Time 60.00
+
+Processor 0 makes WRITE request: Address: 6010d0 Time:61.00
+Processor 0 --  Cache Hit: Address 6010d0 Time 61.00
+procId 0	Write Hits: 11 Address: 6010d0
+CACHE Processor: 0  Time: 61.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d4 Time:62.00
+Processor 0 --  Cache Hit: Address 6010d4 Time 62.00
+
+Processor 0 makes WRITE request: Address: 6010d4 Time:63.00
+Processor 0 --  Cache Hit: Address 6010d4 Time 63.00
+procId 0	Write Hits: 12 Address: 6010d4
+CACHE Processor: 0  Time: 63.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 1013
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d8 Time:64.00
+Processor 0 --  Cache Hit: Address 6010d8 Time 64.00
+
+Processor 0 makes WRITE request: Address: 6010d8 Time:65.00
+Processor 0 --  Cache Hit: Address 6010d8 Time 65.00
+procId 0	Write Hits: 13 Address: 6010d8
+CACHE Processor: 0  Time: 65.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 1013
+CACHE[0][0]: Word[6]: 1014
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010dc Time:66.00
+Processor 0 --  Cache Hit: Address 6010dc Time 66.00
+
+Processor 0 makes WRITE request: Address: 6010dc Time:67.00
+Processor 0 --  Cache Hit: Address 6010dc Time 67.00
+procId 0	Write Hits: 14 Address: 6010dc
+CACHE Processor: 0  Time: 67.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 1013
+CACHE[0][0]: Word[6]: 1014
+CACHE[0][0]: Word[7]: 1015
+********************************
+
+Processor 0 makes READ request: Address: 6010e0 Time:68.00
+Processor 0 -- Cache Miss: Address 6010e0 Time 68.00
+Processor 0 --  BUS REQUEST Time 68.00
+BUS GRANT: Time 69.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 69.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010e0  Time 69.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 69.00
+CACHE[0][0].STATE: M
+Snooper 0 finished  BUS_RD at time 89.00
+CACHE Processor: 0  Time: 89.00
+CACHE[0][0]: Word[0]: 16
+CACHE[0][0]: Word[1]: 17
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 90.00
+Processor 0 -- Completed  cache miss for address 6010e0. Time: 90.00
+Processor 0 --  Cache Hit: Address 6010e0 Time 90.00
+
+Processor 0 makes WRITE request: Address: 6010e0 Time:91.00
+Processor 0 --  Cache Hit: Address 6010e0 Time 91.00
+Processor  0: Need UPGRADE -- Address 6010e0 Time 91.00
+Processor 0 --  BUS REQUEST Time 91.00
+BUS GRANT: Time 92.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 92.00
+Processor 0 -- BROADCAST Command INV  Address 6010e0  Time 92.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 92.00
+Snooper 0 handled INVALIDATE from processor 0 at time 92.00
+Snooper 0 Done with my own INV request. Time: 93.00
+Processor  0: Completed UPGRADE -- Address: 6010e0 STATE[0][0]: M  Time: 93.00
+CACHE Processor: 0  Time: 93.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 17
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010e4 Time:93.00
+Processor 0 --  Cache Hit: Address 6010e4 Time 93.00
+
+Processor 0 makes WRITE request: Address: 6010e4 Time:94.00
+Processor 0 --  Cache Hit: Address 6010e4 Time 94.00
+procId 0	Write Hits: 15 Address: 6010e4
+CACHE Processor: 0  Time: 94.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010e8 Time:95.00
+Processor 0 --  Cache Hit: Address 6010e8 Time 95.00
+
+Processor 0 makes WRITE request: Address: 6010e8 Time:96.00
+Processor 0 --  Cache Hit: Address 6010e8 Time 96.00
+procId 0	Write Hits: 16 Address: 6010e8
+CACHE Processor: 0  Time: 96.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010ec Time:97.00
+Processor 0 --  Cache Hit: Address 6010ec Time 97.00
+
+Processor 0 makes WRITE request: Address: 6010ec Time:98.00
+Processor 0 --  Cache Hit: Address 6010ec Time 98.00
+procId 0	Write Hits: 17 Address: 6010ec
+CACHE Processor: 0  Time: 98.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f0 Time:99.00
+Processor 0 --  Cache Hit: Address 6010f0 Time 99.00
+
+Processor 0 makes WRITE request: Address: 6010f0 Time:100.00
+Processor 0 --  Cache Hit: Address 6010f0 Time 100.00
+procId 0	Write Hits: 18 Address: 6010f0
+CACHE Processor: 0  Time: 100.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f4 Time:101.00
+Processor 0 --  Cache Hit: Address 6010f4 Time 101.00
+
+Processor 0 makes WRITE request: Address: 6010f4 Time:102.00
+Processor 0 --  Cache Hit: Address 6010f4 Time 102.00
+procId 0	Write Hits: 19 Address: 6010f4
+CACHE Processor: 0  Time: 102.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 1021
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f8 Time:103.00
+Processor 0 --  Cache Hit: Address 6010f8 Time 103.00
+
+Processor 0 makes WRITE request: Address: 6010f8 Time:104.00
+Processor 0 --  Cache Hit: Address 6010f8 Time 104.00
+procId 0	Write Hits: 20 Address: 6010f8
+CACHE Processor: 0  Time: 104.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 1021
+CACHE[0][0]: Word[6]: 1022
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010fc Time:105.00
+Processor 0 --  Cache Hit: Address 6010fc Time 105.00
+
+Processor 0 makes WRITE request: Address: 6010fc Time:106.00
+Processor 0 --  Cache Hit: Address 6010fc Time 106.00
+procId 0	Write Hits: 21 Address: 6010fc
+CACHE Processor: 0  Time: 106.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 1021
+CACHE[0][0]: Word[6]: 1022
+CACHE[0][0]: Word[7]: 1023
+********************************
+
+Processor 0 makes READ request: Address: 601100 Time:107.00
+Processor 0 -- Cache Miss: Address 601100 Time 107.00
+Processor 0 --  BUS REQUEST Time 107.00
+BUS GRANT: Time 108.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 108.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 601100  Time 108.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 108.00
+CACHE[0][0].STATE: M
+Snooper 0 finished  BUS_RD at time 128.00
+CACHE Processor: 0  Time: 128.00
+CACHE[0][0]: Word[0]: 24
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 129.00
+Processor 0 -- Completed  cache miss for address 601100. Time: 129.00
+Processor 0 --  Cache Hit: Address 601100 Time 129.00
+
+Processor 0 makes WRITE request: Address: 601100 Time:130.00
+Processor 0 --  Cache Hit: Address 601100 Time 130.00
+Processor  0: Need UPGRADE -- Address 601100 Time 130.00
+Processor 0 --  BUS REQUEST Time 130.00
+BUS GRANT: Time 131.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 131.00
+Processor 0 -- BROADCAST Command INV  Address 601100  Time 131.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 131.00
+Snooper 0 handled INVALIDATE from processor 0 at time 131.00
+Snooper 0 Done with my own INV request. Time: 132.00
+Processor  0: Completed UPGRADE -- Address: 601100 STATE[0][0]: M  Time: 132.00
+CACHE Processor: 0  Time: 132.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601104 Time:132.00
+Processor 0 --  Cache Hit: Address 601104 Time 132.00
+
+Processor 0 makes WRITE request: Address: 601104 Time:133.00
+Processor 0 --  Cache Hit: Address 601104 Time 133.00
+procId 0	Write Hits: 22 Address: 601104
+CACHE Processor: 0  Time: 133.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601108 Time:134.00
+Processor 0 --  Cache Hit: Address 601108 Time 134.00
+
+Processor 0 makes WRITE request: Address: 601108 Time:135.00
+Processor 0 --  Cache Hit: Address 601108 Time 135.00
+procId 0	Write Hits: 23 Address: 601108
+CACHE Processor: 0  Time: 135.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 60110c Time:136.00
+Processor 0 --  Cache Hit: Address 60110c Time 136.00
+
+Processor 0 makes WRITE request: Address: 60110c Time:137.00
+Processor 0 --  Cache Hit: Address 60110c Time 137.00
+procId 0	Write Hits: 24 Address: 60110c
+CACHE Processor: 0  Time: 137.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601110 Time:138.00
+Processor 0 --  Cache Hit: Address 601110 Time 138.00
+
+Processor 0 makes WRITE request: Address: 601110 Time:139.00
+Processor 0 --  Cache Hit: Address 601110 Time 139.00
+procId 0	Write Hits: 25 Address: 601110
+CACHE Processor: 0  Time: 139.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601114 Time:140.00
+Processor 0 --  Cache Hit: Address 601114 Time 140.00
+
+Processor 0 makes WRITE request: Address: 601114 Time:141.00
+Processor 0 --  Cache Hit: Address 601114 Time 141.00
+procId 0	Write Hits: 26 Address: 601114
+CACHE Processor: 0  Time: 141.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 1029
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601118 Time:142.00
+Processor 0 --  Cache Hit: Address 601118 Time 142.00
+
+Processor 0 makes WRITE request: Address: 601118 Time:143.00
+Processor 0 --  Cache Hit: Address 601118 Time 143.00
+procId 0	Write Hits: 27 Address: 601118
+CACHE Processor: 0  Time: 143.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 1029
+CACHE[0][0]: Word[6]: 1030
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 60111c Time:144.00
+Processor 0 --  Cache Hit: Address 60111c Time 144.00
+
+Processor 0 makes WRITE request: Address: 60111c Time:145.00
+Processor 0 --  Cache Hit: Address 60111c Time 145.00
+procId 0	Write Hits: 28 Address: 60111c
+CACHE Processor: 0  Time: 145.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 1029
+CACHE[0][0]: Word[6]: 1030
+CACHE[0][0]: Word[7]: 1031
+********************************
+
+Processor: 0	READ HITS: 32	READ MISSES: 4	SILENT WRITE HITS: 28	UPGRADES: 4	WRITE MISSES: 0	WRITEBACKS: 3	Num U converted: 0	Time: 146.00
+Simulation ended  at 146.00
+
+
+READ HITS: 32	READ MISSES: 4	SILENT WRITE HITS: 28	UPGRADES: 4	WRITE MISSES: 0	WRITEBACKS: 3	Time: 146.00	Number Upgrades Converted to BUSRDX: 0
+MEM[0] : 1000
+MEM[1] : 1001
+MEM[2] : 1002
+MEM[3] : 1003
+MEM[4] : 1004
+MEM[5] : 1005
+MEM[6] : 1006
+MEM[7] : 1007
+MEM[8] : 1008
+MEM[9] : 1009
+MEM[10] : 1010
+MEM[11] : 1011
+MEM[12] : 1012
+MEM[13] : 1013
+MEM[14] : 1014
+MEM[15] : 1015
+MEM[16] : 1016
+MEM[17] : 1017
+MEM[18] : 1018
+MEM[19] : 1019
+MEM[20] : 1020
+MEM[21] : 1021
+MEM[22] : 1022
+MEM[23] : 1023
+MEM[24] : 24
+MEM[25] : 25
+MEM[26] : 26
+MEM[27] : 27
+MEM[28] : 28
+MEM[29] : 29
+MEM[30] : 30
+MEM[31] : 31

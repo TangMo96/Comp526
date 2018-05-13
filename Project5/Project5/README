@@ -1,0 +1,50 @@
+When ready  change MAX_SIMULATION_TIME (in global.h) to a large number like 1000000000.0
+
+Source Files
+------------
+sim.c: Simulation Driver and Processor Implementation
+mem.c: Front end  Cache Controller 
+bus.c: Back end Cache Controller 
+arrayupdate.c: Trace-file generator
+
+
+Header Files
+------------
+global.h: Global definitions
+sim.h: Required by Yacsim
+
+Object Files
+------------
+utils.o: Helper functions
+yacsim.o: Simulator code
+
+Directory:
+----------
+demos: Contains traces of three example runs.
+See the README file in the directory for details.
+
+demo1:   NUM_PROCESSORS = 1
+demo2C:  NUM_PROCESSORS = 2, Chunk Data Partitioning
+demo2I:  NUM_PROCESSORS = 2, Interleaved Data Partitioning
+
+
+Text Files
+-----------
+README: This file
+
+
+Execution
+---------
+Every change of parameter involves creating new trace files.
+
+Create trace files
+-------------------
+gcc arrayupdate.c
+./a.out
+
+
+Simulation
+-----------
+gcc sim.c mem.c bus.c utils.o ./yacsim.o -lm -o runme
+./runme
+

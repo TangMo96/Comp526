@@ -1,0 +1,1350 @@
+
+********************************************************************************
+********************************************************************************
+**                                                                            **
+**                      YACSIM Version 2.0, 3/6/93                            **
+**                                                                            **
+**            Copyright 1993 by Rice University, Houston, Texas               **
+**                                                                            **
+**        Send comments to: J. Robert Jump, ECE Dept., Rice University        **
+**       P.O. Box 1892, Houston, TX 77251; (713) 527-8101; jrj@rice.edu       **
+**                                                                            **
+********************************************************************************
+********************************************************************************
+
+Base Physical Address: 0x605240
+CACHE Processor: 0  Time:  0.00
+CACHE[0][0]: Word[0]: 0
+CACHE[0][0]: Word[1]: 0
+CACHE[0][0]: Word[2]: 0
+CACHE[0][0]: Word[3]: 0
+CACHE[0][0]: Word[4]: 0
+CACHE[0][0]: Word[5]: 0
+CACHE[0][0]: Word[6]: 0
+CACHE[0][0]: Word[7]: 0
+********************************
+CACHE Processor: 1  Time:  0.00
+CACHE[1][0]: Word[0]: 0
+CACHE[1][0]: Word[1]: 0
+CACHE[1][0]: Word[2]: 0
+CACHE[1][0]: Word[3]: 0
+CACHE[1][0]: Word[4]: 0
+CACHE[1][0]: Word[5]: 0
+CACHE[1][0]: Word[6]: 0
+CACHE[1][0]: Word[7]: 0
+********************************
+Done Creating FrontEndCacheControllers 
+Done Creating Bus Snoopers
+Done Creating Bus Arbiter  Process
+Done Creating Processors
+FrontEndCacheController[0]: Activated at time  0.00
+FrontEndCacheController[1]: Activated at time  0.00
+Bus Arbiter Activated at time   0
+Processor[0]: Activated at time  0.00
+
+Processor 0 makes READ request: Address: 6010a0 Time: 0.00
+Processor[1]: Activated at time  0.00
+
+Processor 1 makes READ request: Address: 6010a4 Time: 0.00
+Processor 0 -- Cache Miss: Address 6010a0 Time  0.00
+Processor 0 --  BUS REQUEST Time  0.00
+Processor 1 -- Cache Miss: Address 6010a4 Time  0.00
+Processor 1 --  BUS REQUEST Time  0.00
+BusSnooper[0]: Activated at time  0.00
+BusSnooper[1]: Activated at time  0.00
+BUS GRANT: Time  1.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time  1.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010a0  Time  1.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time  1.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time  1.00
+Snooper 1 ignoring request at time  1.00
+Snooper 0 finished  BUS_RD at time 11.00
+CACHE Processor: 0  Time: 11.00
+CACHE[0][0]: Word[0]: 0
+CACHE[0][0]: Word[1]: 1
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 12.00
+Processor 0 -- Completed  cache miss for address 6010a0. Time: 12.00
+Processor 0 --  Cache Hit: Address 6010a0 Time 12.00
+BUS GRANT: Time 13.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 13.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 6010a4  Time 13.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 13.00
+Snooper 0 finished BUS_RD at time 13.00. CACHE[0][0].STATE: S
+BusSnooper[1] --  Woken with Bus COMMAND  at time 13.00
+
+Processor 0 makes WRITE request: Address: 6010a0 Time:13.00
+Processor 0 --  Cache Hit: Address 6010a0 Time 13.00
+Processor  0: Need UPGRADE -- Address 6010a0 Time 13.00
+Processor 0 --  BUS REQUEST Time 13.00
+Snooper 1 finished  BUS_RD at time 23.00
+CACHE Processor: 1  Time: 23.00
+CACHE[1][0]: Word[0]: 0
+CACHE[1][0]: Word[1]: 1
+CACHE[1][0]: Word[2]: 2
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 24.00
+Processor 1 -- Completed  cache miss for address 6010a4. Time: 24.00
+Processor 1 --  Cache Hit: Address 6010a4 Time 24.00
+BUS GRANT: Time 25.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 25.00
+Processor 0 -- BROADCAST Command INV  Address 6010a0  Time 25.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 25.00
+Snooper 0 handled INVALIDATE from processor 0 at time 25.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 25.00
+Snooper 1 finished handling INV  at time 25.00
+
+Processor 1 makes WRITE request: Address: 6010a4 Time:25.00
+Processor 1 -- Cache Miss: Address 6010a4 Time 25.00
+procId 1	Write Misses: 1 Address: 6010a4
+Processor 1 --  BUS REQUEST Time 25.00
+Snooper 0 Done with my own INV request. Time: 26.00
+Processor  0: Completed UPGRADE -- Address: 6010a0 STATE[0][0]: M  Time: 26.00
+CACHE Processor: 0  Time: 26.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010a8 Time:26.00
+Processor 0 --  Cache Hit: Address 6010a8 Time 26.00
+BUS GRANT: Time 27.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 27.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 6010a4  Time 27.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 27.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 27.00
+
+Processor 0 makes WRITE request: Address: 6010a8 Time:27.00
+Processor 0 -- Cache Miss: Address 6010a8 Time 27.00
+procId 0	Write Misses: 1 Address: 6010a8
+Processor 0 --  BUS REQUEST Time 27.00
+Snooper 0 finished BUS_RDX at time 37.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 37.00
+CACHE Processor: 1  Time: 37.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1
+CACHE[1][0]: Word[2]: 2
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 38.00
+Processor 1 -- Completed  cache miss for address 6010a4. Time: 38.00
+Processor 1 --  Cache Hit: Address 6010a4 Time 38.00
+procId 1	Write Hits: 1 Address: 6010a4
+CACHE Processor: 1  Time: 38.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 2
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+BUS GRANT: Time 39.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RDX Time 39.00
+Processor 0 -- BROADCAST Command BUS_RDX  Address 6010a8  Time 39.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 39.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 39.00
+
+Processor 1 makes READ request: Address: 6010ac Time:39.00
+Processor 1 -- Cache Miss: Address 6010ac Time 39.00
+Processor 1 --  BUS REQUEST Time 39.00
+Snooper 1 finished BUS_RDX at time 49.00. CACHE[1][0].STATE: I
+Snooper 0 finished  BUS_RDX at time 49.00
+CACHE Processor: 0  Time: 49.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 2
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Snooper 0 Done with my own BUS_RDX request. Time: 50.00
+Processor 0 -- Completed  cache miss for address 6010a8. Time: 50.00
+Processor 0 --  Cache Hit: Address 6010a8 Time 50.00
+procId 0	Write Hits: 1 Address: 6010a8
+CACHE Processor: 0  Time: 50.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 4
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+BUS GRANT: Time 51.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 51.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 6010ac  Time 51.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 51.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 51.00
+
+Processor 0 makes READ request: Address: 6010b0 Time:51.00
+Processor 0 --  Cache Hit: Address 6010b0 Time 51.00
+
+Processor 0 makes WRITE request: Address: 6010b0 Time:52.00
+Processor 0 --  Cache Hit: Address 6010b0 Time 52.00
+Processor  0: Need UPGRADE -- Address 6010b0 Time 52.00
+Processor 0 --  BUS REQUEST Time 52.00
+Snooper 0 finished BUS_RD at time 61.00. CACHE[0][0].STATE: SM
+Snooper 1 finished  BUS_RD at time 61.00
+CACHE Processor: 1  Time: 61.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 1002
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 4
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 62.00
+Processor 1 -- Completed  cache miss for address 6010ac. Time: 62.00
+Processor 1 --  Cache Hit: Address 6010ac Time 62.00
+BUS GRANT: Time 63.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 63.00
+Processor 0 -- BROADCAST Command INV  Address 6010b0  Time 63.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 63.00
+Snooper 0 handled INVALIDATE from processor 0 at time 63.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 63.00
+Snooper 1 finished handling INV  at time 63.00
+
+Processor 1 makes WRITE request: Address: 6010ac Time:63.00
+Processor 1 -- Cache Miss: Address 6010ac Time 63.00
+procId 1	Write Misses: 2 Address: 6010ac
+Processor 1 --  BUS REQUEST Time 63.00
+Snooper 0 Done with my own INV request. Time: 64.00
+Processor  0: Completed UPGRADE -- Address: 6010b0 STATE[0][0]: M  Time: 64.00
+CACHE Processor: 0  Time: 64.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 3
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+
+Processor 0 makes READ request: Address: 6010b8 Time:64.00
+Processor 0 --  Cache Hit: Address 6010b8 Time 64.00
+BUS GRANT: Time 65.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 65.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 6010ac  Time 65.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 65.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 65.00
+
+Processor 0 makes WRITE request: Address: 6010b8 Time:65.00
+Processor 0 -- Cache Miss: Address 6010b8 Time 65.00
+procId 0	Write Misses: 2 Address: 6010b8
+Processor 0 --  BUS REQUEST Time 65.00
+Snooper 0 finished BUS_RDX at time 75.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 75.00
+CACHE Processor: 1  Time: 75.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 1002
+CACHE[1][0]: Word[3]: 3
+CACHE[1][0]: Word[4]: 1004
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 76.00
+Processor 1 -- Completed  cache miss for address 6010ac. Time: 76.00
+Processor 1 --  Cache Hit: Address 6010ac Time 76.00
+procId 1	Write Hits: 2 Address: 6010ac
+CACHE Processor: 1  Time: 76.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 1002
+CACHE[1][0]: Word[3]: 1003
+CACHE[1][0]: Word[4]: 1004
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 6
+CACHE[1][0]: Word[7]: 7
+********************************
+BUS GRANT: Time 77.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RDX Time 77.00
+Processor 0 -- BROADCAST Command BUS_RDX  Address 6010b8  Time 77.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 77.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 77.00
+
+Processor 1 makes READ request: Address: 6010b4 Time:77.00
+Processor 1 -- Cache Miss: Address 6010b4 Time 77.00
+Processor 1 --  BUS REQUEST Time 77.00
+Snooper 1 finished BUS_RDX at time 87.00. CACHE[1][0].STATE: I
+Snooper 0 finished  BUS_RDX at time 87.00
+CACHE Processor: 0  Time: 87.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 6
+CACHE[0][0]: Word[7]: 7
+********************************
+Snooper 0 Done with my own BUS_RDX request. Time: 88.00
+Processor 0 -- Completed  cache miss for address 6010b8. Time: 88.00
+Processor 0 --  Cache Hit: Address 6010b8 Time 88.00
+procId 0	Write Hits: 2 Address: 6010b8
+CACHE Processor: 0  Time: 88.00
+CACHE[0][0]: Word[0]: 1000
+CACHE[0][0]: Word[1]: 1001
+CACHE[0][0]: Word[2]: 1002
+CACHE[0][0]: Word[3]: 1003
+CACHE[0][0]: Word[4]: 1004
+CACHE[0][0]: Word[5]: 5
+CACHE[0][0]: Word[6]: 1006
+CACHE[0][0]: Word[7]: 7
+********************************
+BUS GRANT: Time 89.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 89.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 6010b4  Time 89.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 89.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 89.00
+
+Processor 0 makes READ request: Address: 6010c0 Time:89.00
+Processor 0 -- Cache Miss: Address 6010c0 Time 89.00
+Processor 0 --  BUS REQUEST Time 89.00
+Snooper 0 finished BUS_RD at time 99.00. CACHE[0][0].STATE: S
+Snooper 1 finished  BUS_RD at time 99.00
+CACHE Processor: 1  Time: 99.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 1002
+CACHE[1][0]: Word[3]: 1003
+CACHE[1][0]: Word[4]: 1004
+CACHE[1][0]: Word[5]: 5
+CACHE[1][0]: Word[6]: 1006
+CACHE[1][0]: Word[7]: 7
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 100.00
+Processor 1 -- Completed  cache miss for address 6010b4. Time: 100.00
+Processor 1 --  Cache Hit: Address 6010b4 Time 100.00
+BUS GRANT: Time 101.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 101.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010c0  Time 101.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 101.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 101.00
+Snooper 1 ignoring request at time 101.00
+
+Processor 1 makes WRITE request: Address: 6010b4 Time:101.00
+Processor 1 --  Cache Hit: Address 6010b4 Time 101.00
+Processor  1: Need UPGRADE -- Address 6010b4 Time 101.00
+Processor 1 --  BUS REQUEST Time 101.00
+Snooper 0 finished  BUS_RD at time 111.00
+CACHE Processor: 0  Time: 111.00
+CACHE[0][0]: Word[0]: 8
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 112.00
+Processor 0 -- Completed  cache miss for address 6010c0. Time: 112.00
+Processor 0 --  Cache Hit: Address 6010c0 Time 112.00
+BUS GRANT: Time 113.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: INV Time 113.00
+Processor 1 -- BROADCAST Command INV  Address 6010b4  Time 113.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 113.00
+Snooper 0 ignoring request at time 113.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 113.00
+Snooper 1 handled INVALIDATE from processor 1 at time 113.00
+
+Processor 0 makes WRITE request: Address: 6010c0 Time:113.00
+Processor 0 --  Cache Hit: Address 6010c0 Time 113.00
+Processor  0: Need UPGRADE -- Address 6010c0 Time 113.00
+Processor 0 --  BUS REQUEST Time 113.00
+Snooper 1 Done with my own INV request. Time: 114.00
+Processor  1: Completed UPGRADE -- Address: 6010b4 STATE[1][0]: M  Time: 114.00
+CACHE Processor: 1  Time: 114.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 1002
+CACHE[1][0]: Word[3]: 1003
+CACHE[1][0]: Word[4]: 1004
+CACHE[1][0]: Word[5]: 1005
+CACHE[1][0]: Word[6]: 1006
+CACHE[1][0]: Word[7]: 7
+********************************
+
+Processor 1 makes READ request: Address: 6010bc Time:114.00
+Processor 1 --  Cache Hit: Address 6010bc Time 114.00
+BUS GRANT: Time 115.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 115.00
+Processor 0 -- BROADCAST Command INV  Address 6010c0  Time 115.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 115.00
+Snooper 0 handled INVALIDATE from processor 0 at time 115.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 115.00
+Snooper 1 ignoring request at time 115.00
+
+Processor 1 makes WRITE request: Address: 6010bc Time:115.00
+Processor 1 --  Cache Hit: Address 6010bc Time 115.00
+procId 1	Write Hits: 3 Address: 6010bc
+CACHE Processor: 1  Time: 115.00
+CACHE[1][0]: Word[0]: 1000
+CACHE[1][0]: Word[1]: 1001
+CACHE[1][0]: Word[2]: 1002
+CACHE[1][0]: Word[3]: 1003
+CACHE[1][0]: Word[4]: 1004
+CACHE[1][0]: Word[5]: 1005
+CACHE[1][0]: Word[6]: 1006
+CACHE[1][0]: Word[7]: 1007
+********************************
+Snooper 0 Done with my own INV request. Time: 116.00
+Processor  0: Completed UPGRADE -- Address: 6010c0 STATE[0][0]: M  Time: 116.00
+CACHE Processor: 0  Time: 116.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 10
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 1 makes READ request: Address: 6010c4 Time:116.00
+
+Processor 0 makes READ request: Address: 6010c8 Time:116.00
+Processor 1 -- Cache Miss: Address 6010c4 Time 116.00
+Processor 1 --  BUS REQUEST Time 116.00
+Processor 0 --  Cache Hit: Address 6010c8 Time 116.00
+BUS GRANT: Time 117.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 117.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 6010c4  Time 117.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 117.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 117.00
+CACHE[1][0].STATE: M
+
+Processor 0 makes WRITE request: Address: 6010c8 Time:117.00
+Processor 0 --  Cache Hit: Address 6010c8 Time 117.00
+Processor  0: Need UPGRADE -- Address 6010c8 Time 117.00
+Processor 0 --  BUS REQUEST Time 117.00
+Snooper 0 finished BUS_RD at time 127.00. CACHE[0][0].STATE: SM
+Snooper 1 finished  BUS_RD at time 137.00
+CACHE Processor: 1  Time: 137.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 9
+CACHE[1][0]: Word[2]: 10
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 12
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 138.00
+Processor 1 -- Completed  cache miss for address 6010c4. Time: 138.00
+Processor 1 --  Cache Hit: Address 6010c4 Time 138.00
+BUS GRANT: Time 139.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 139.00
+Processor 0 -- BROADCAST Command INV  Address 6010c8  Time 139.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 139.00
+Snooper 0 handled INVALIDATE from processor 0 at time 139.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 139.00
+Snooper 1 finished handling INV  at time 139.00
+
+Processor 1 makes WRITE request: Address: 6010c4 Time:139.00
+Processor 1 -- Cache Miss: Address 6010c4 Time 139.00
+procId 1	Write Misses: 3 Address: 6010c4
+Processor 1 --  BUS REQUEST Time 139.00
+Snooper 0 Done with my own INV request. Time: 140.00
+Processor  0: Completed UPGRADE -- Address: 6010c8 STATE[0][0]: M  Time: 140.00
+CACHE Processor: 0  Time: 140.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 12
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010d0 Time:140.00
+Processor 0 --  Cache Hit: Address 6010d0 Time 140.00
+BUS GRANT: Time 141.00.  BUS_GRANT[1]: TRUE
+
+Processor 0 makes WRITE request: Address: 6010d0 Time:141.00
+Processor 0 --  Cache Hit: Address 6010d0 Time 141.00
+procId 0	Write Hits: 3 Address: 6010d0
+CACHE Processor: 0  Time: 141.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 9
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 141.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 6010c4  Time 141.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 141.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 141.00
+
+Processor 0 makes READ request: Address: 6010d8 Time:142.00
+Processor 0 -- Cache Miss: Address 6010d8 Time 142.00
+Processor 0 --  BUS REQUEST Time 142.00
+Snooper 0 finished BUS_RDX at time 151.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 151.00
+CACHE Processor: 1  Time: 151.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 9
+CACHE[1][0]: Word[2]: 1010
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 1012
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 152.00
+Processor 1 -- Completed  cache miss for address 6010c4. Time: 152.00
+Processor 1 --  Cache Hit: Address 6010c4 Time 152.00
+procId 1	Write Hits: 4 Address: 6010c4
+CACHE Processor: 1  Time: 152.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 1009
+CACHE[1][0]: Word[2]: 1010
+CACHE[1][0]: Word[3]: 11
+CACHE[1][0]: Word[4]: 1012
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+BUS GRANT: Time 153.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 153.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010d8  Time 153.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 153.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 153.00
+
+Processor 1 makes READ request: Address: 6010cc Time:153.00
+Processor 1 --  Cache Hit: Address 6010cc Time 153.00
+
+Processor 1 makes WRITE request: Address: 6010cc Time:154.00
+Processor 1 --  Cache Hit: Address 6010cc Time 154.00
+Processor  1: Need UPGRADE -- Address 6010cc Time 154.00
+Processor 1 --  BUS REQUEST Time 154.00
+Snooper 1 finished BUS_RD at time 163.00. CACHE[1][0].STATE: SM
+Snooper 0 finished  BUS_RD at time 163.00
+CACHE Processor: 0  Time: 163.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 11
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 164.00
+Processor 0 -- Completed  cache miss for address 6010d8. Time: 164.00
+Processor 0 --  Cache Hit: Address 6010d8 Time 164.00
+BUS GRANT: Time 165.00.  BUS_GRANT[1]: TRUE
+
+Processor 0 makes WRITE request: Address: 6010d8 Time:165.00
+Processor 0 --  Cache Hit: Address 6010d8 Time 165.00
+Processor  0: Need UPGRADE -- Address 6010d8 Time 165.00
+Processor 0 --  BUS REQUEST Time 165.00
+Processor 1 -- BUS GRANT  COMMAND: INV Time 165.00
+Processor 1 -- BROADCAST Command INV  Address 6010cc  Time 165.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 165.00
+Snooper 0 finished handling INV  at time 165.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 165.00
+Snooper 1 handled INVALIDATE from processor 1 at time 165.00
+Snooper 1 Done with my own INV request. Time: 166.00
+Processor  1: Completed UPGRADE -- Address: 6010cc STATE[1][0]: M  Time: 166.00
+CACHE Processor: 1  Time: 166.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 1009
+CACHE[1][0]: Word[2]: 1010
+CACHE[1][0]: Word[3]: 1011
+CACHE[1][0]: Word[4]: 1012
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 14
+CACHE[1][0]: Word[7]: 15
+********************************
+
+Processor 1 makes READ request: Address: 6010d4 Time:166.00
+Processor 1 --  Cache Hit: Address 6010d4 Time 166.00
+BUS GRANT: Time 167.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RDX Time 167.00
+Processor 0 -- BROADCAST Command BUS_RDX  Address 6010d8  Time 167.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 167.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 167.00
+
+Processor 1 makes WRITE request: Address: 6010d4 Time:167.00
+Processor 1 -- Cache Miss: Address 6010d4 Time 167.00
+procId 1	Write Misses: 4 Address: 6010d4
+Processor 1 --  BUS REQUEST Time 167.00
+Snooper 1 finished BUS_RDX at time 177.00. CACHE[1][0].STATE: I
+Snooper 0 finished  BUS_RDX at time 177.00
+CACHE Processor: 0  Time: 177.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 14
+CACHE[0][0]: Word[7]: 15
+********************************
+Snooper 0 Done with my own BUS_RDX request. Time: 178.00
+Processor  0: Completed Interrupted UPGRADE -- Address: 6010d8 STATE[0][0]: M  Time: 178.00
+CACHE Processor: 0  Time: 178.00
+CACHE[0][0]: Word[0]: 1008
+CACHE[0][0]: Word[1]: 1009
+CACHE[0][0]: Word[2]: 1010
+CACHE[0][0]: Word[3]: 1011
+CACHE[0][0]: Word[4]: 1012
+CACHE[0][0]: Word[5]: 13
+CACHE[0][0]: Word[6]: 1014
+CACHE[0][0]: Word[7]: 15
+********************************
+
+Processor 0 makes READ request: Address: 6010e0 Time:178.00
+Processor 0 -- Cache Miss: Address 6010e0 Time 178.00
+Processor 0 --  BUS REQUEST Time 178.00
+BUS GRANT: Time 179.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 179.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 6010d4  Time 179.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 179.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 179.00
+Snooper 0 finished BUS_RDX at time 189.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 189.00
+CACHE Processor: 1  Time: 189.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 1009
+CACHE[1][0]: Word[2]: 1010
+CACHE[1][0]: Word[3]: 1011
+CACHE[1][0]: Word[4]: 1012
+CACHE[1][0]: Word[5]: 13
+CACHE[1][0]: Word[6]: 1014
+CACHE[1][0]: Word[7]: 15
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 190.00
+Processor 1 -- Completed  cache miss for address 6010d4. Time: 190.00
+Processor 1 --  Cache Hit: Address 6010d4 Time 190.00
+procId 1	Write Hits: 5 Address: 6010d4
+CACHE Processor: 1  Time: 190.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 1009
+CACHE[1][0]: Word[2]: 1010
+CACHE[1][0]: Word[3]: 1011
+CACHE[1][0]: Word[4]: 1012
+CACHE[1][0]: Word[5]: 1013
+CACHE[1][0]: Word[6]: 1014
+CACHE[1][0]: Word[7]: 15
+********************************
+BUS GRANT: Time 191.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 191.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010e0  Time 191.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 191.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 191.00
+Snooper 1 ignoring request at time 191.00
+
+Processor 1 makes READ request: Address: 6010dc Time:191.00
+Processor 1 --  Cache Hit: Address 6010dc Time 191.00
+
+Processor 1 makes WRITE request: Address: 6010dc Time:192.00
+Processor 1 --  Cache Hit: Address 6010dc Time 192.00
+procId 1	Write Hits: 6 Address: 6010dc
+CACHE Processor: 1  Time: 192.00
+CACHE[1][0]: Word[0]: 1008
+CACHE[1][0]: Word[1]: 1009
+CACHE[1][0]: Word[2]: 1010
+CACHE[1][0]: Word[3]: 1011
+CACHE[1][0]: Word[4]: 1012
+CACHE[1][0]: Word[5]: 1013
+CACHE[1][0]: Word[6]: 1014
+CACHE[1][0]: Word[7]: 1015
+********************************
+
+Processor 1 makes READ request: Address: 6010e4 Time:193.00
+Processor 1 -- Cache Miss: Address 6010e4 Time 193.00
+Processor 1 --  BUS REQUEST Time 193.00
+Snooper 0 finished  BUS_RD at time 201.00
+CACHE Processor: 0  Time: 201.00
+CACHE[0][0]: Word[0]: 16
+CACHE[0][0]: Word[1]: 17
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 202.00
+Processor 0 -- Completed  cache miss for address 6010e0. Time: 202.00
+Processor 0 --  Cache Hit: Address 6010e0 Time 202.00
+BUS GRANT: Time 203.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 203.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 6010e4  Time 203.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 203.00
+Snooper 0 finished BUS_RD at time 203.00. CACHE[0][0].STATE: S
+BusSnooper[1] --  Woken with Bus COMMAND  at time 203.00
+CACHE[1][0].STATE: M
+
+Processor 0 makes WRITE request: Address: 6010e0 Time:203.00
+Processor 0 --  Cache Hit: Address 6010e0 Time 203.00
+Processor  0: Need UPGRADE -- Address 6010e0 Time 203.00
+Processor 0 --  BUS REQUEST Time 203.00
+Snooper 1 finished  BUS_RD at time 223.00
+CACHE Processor: 1  Time: 223.00
+CACHE[1][0]: Word[0]: 16
+CACHE[1][0]: Word[1]: 17
+CACHE[1][0]: Word[2]: 18
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 224.00
+Processor 1 -- Completed  cache miss for address 6010e4. Time: 224.00
+Processor 1 --  Cache Hit: Address 6010e4 Time 224.00
+BUS GRANT: Time 225.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 225.00
+Processor 0 -- BROADCAST Command INV  Address 6010e0  Time 225.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 225.00
+Snooper 0 handled INVALIDATE from processor 0 at time 225.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 225.00
+Snooper 1 finished handling INV  at time 225.00
+
+Processor 1 makes WRITE request: Address: 6010e4 Time:225.00
+Processor 1 -- Cache Miss: Address 6010e4 Time 225.00
+procId 1	Write Misses: 5 Address: 6010e4
+Processor 1 --  BUS REQUEST Time 225.00
+Snooper 0 Done with my own INV request. Time: 226.00
+Processor  0: Completed UPGRADE -- Address: 6010e0 STATE[0][0]: M  Time: 226.00
+CACHE Processor: 0  Time: 226.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 17
+CACHE[0][0]: Word[2]: 18
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010e8 Time:226.00
+Processor 0 --  Cache Hit: Address 6010e8 Time 226.00
+BUS GRANT: Time 227.00.  BUS_GRANT[1]: TRUE
+
+Processor 0 makes WRITE request: Address: 6010e8 Time:227.00
+Processor 0 --  Cache Hit: Address 6010e8 Time 227.00
+procId 0	Write Hits: 4 Address: 6010e8
+CACHE Processor: 0  Time: 227.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 17
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 227.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 6010e4  Time 227.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 227.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 227.00
+
+Processor 0 makes READ request: Address: 6010f0 Time:228.00
+Processor 0 -- Cache Miss: Address 6010f0 Time 228.00
+Processor 0 --  BUS REQUEST Time 228.00
+Snooper 0 finished BUS_RDX at time 237.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 237.00
+CACHE Processor: 1  Time: 237.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 17
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 238.00
+Processor 1 -- Completed  cache miss for address 6010e4. Time: 238.00
+Processor 1 --  Cache Hit: Address 6010e4 Time 238.00
+procId 1	Write Hits: 7 Address: 6010e4
+CACHE Processor: 1  Time: 238.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 1017
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 19
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+BUS GRANT: Time 239.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 239.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 6010f0  Time 239.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 239.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 239.00
+
+Processor 1 makes READ request: Address: 6010ec Time:239.00
+Processor 1 --  Cache Hit: Address 6010ec Time 239.00
+
+Processor 1 makes WRITE request: Address: 6010ec Time:240.00
+Processor 1 --  Cache Hit: Address 6010ec Time 240.00
+Processor  1: Need UPGRADE -- Address 6010ec Time 240.00
+Processor 1 --  BUS REQUEST Time 240.00
+Snooper 1 finished BUS_RD at time 249.00. CACHE[1][0].STATE: SM
+Snooper 0 finished  BUS_RD at time 249.00
+CACHE Processor: 0  Time: 249.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 19
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 250.00
+Processor 0 -- Completed  cache miss for address 6010f0. Time: 250.00
+Processor 0 --  Cache Hit: Address 6010f0 Time 250.00
+BUS GRANT: Time 251.00.  BUS_GRANT[1]: TRUE
+
+Processor 0 makes WRITE request: Address: 6010f0 Time:251.00
+Processor 0 --  Cache Hit: Address 6010f0 Time 251.00
+Processor  0: Need UPGRADE -- Address 6010f0 Time 251.00
+Processor 0 --  BUS REQUEST Time 251.00
+Processor 1 -- BUS GRANT  COMMAND: INV Time 251.00
+Processor 1 -- BROADCAST Command INV  Address 6010ec  Time 251.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 251.00
+Snooper 0 finished handling INV  at time 251.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 251.00
+Snooper 1 handled INVALIDATE from processor 1 at time 251.00
+Snooper 1 Done with my own INV request. Time: 252.00
+Processor  1: Completed UPGRADE -- Address: 6010ec STATE[1][0]: M  Time: 252.00
+CACHE Processor: 1  Time: 252.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 1017
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 1019
+CACHE[1][0]: Word[4]: 20
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+
+Processor 1 makes READ request: Address: 6010f4 Time:252.00
+Processor 1 --  Cache Hit: Address 6010f4 Time 252.00
+BUS GRANT: Time 253.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RDX Time 253.00
+Processor 0 -- BROADCAST Command BUS_RDX  Address 6010f0  Time 253.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 253.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 253.00
+
+Processor 1 makes WRITE request: Address: 6010f4 Time:253.00
+Processor 1 -- Cache Miss: Address 6010f4 Time 253.00
+procId 1	Write Misses: 6 Address: 6010f4
+Processor 1 --  BUS REQUEST Time 253.00
+Snooper 1 finished BUS_RDX at time 263.00. CACHE[1][0].STATE: I
+Snooper 0 finished  BUS_RDX at time 263.00
+CACHE Processor: 0  Time: 263.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 20
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Snooper 0 Done with my own BUS_RDX request. Time: 264.00
+Processor  0: Completed Interrupted UPGRADE -- Address: 6010f0 STATE[0][0]: M  Time: 264.00
+CACHE Processor: 0  Time: 264.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 21
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+
+Processor 0 makes READ request: Address: 6010f8 Time:264.00
+Processor 0 --  Cache Hit: Address 6010f8 Time 264.00
+BUS GRANT: Time 265.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 265.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 6010f4  Time 265.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 265.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 265.00
+
+Processor 0 makes WRITE request: Address: 6010f8 Time:265.00
+Processor 0 -- Cache Miss: Address 6010f8 Time 265.00
+procId 0	Write Misses: 5 Address: 6010f8
+Processor 0 --  BUS REQUEST Time 265.00
+Snooper 0 finished BUS_RDX at time 275.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 275.00
+CACHE Processor: 1  Time: 275.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 1017
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 1019
+CACHE[1][0]: Word[4]: 1020
+CACHE[1][0]: Word[5]: 21
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 276.00
+Processor 1 -- Completed  cache miss for address 6010f4. Time: 276.00
+Processor 1 --  Cache Hit: Address 6010f4 Time 276.00
+procId 1	Write Hits: 8 Address: 6010f4
+CACHE Processor: 1  Time: 276.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 1017
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 1019
+CACHE[1][0]: Word[4]: 1020
+CACHE[1][0]: Word[5]: 1021
+CACHE[1][0]: Word[6]: 22
+CACHE[1][0]: Word[7]: 23
+********************************
+BUS GRANT: Time 277.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RDX Time 277.00
+Processor 0 -- BROADCAST Command BUS_RDX  Address 6010f8  Time 277.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 277.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 277.00
+
+Processor 1 makes READ request: Address: 6010fc Time:277.00
+Processor 1 -- Cache Miss: Address 6010fc Time 277.00
+Processor 1 --  BUS REQUEST Time 277.00
+Snooper 1 finished BUS_RDX at time 287.00. CACHE[1][0].STATE: I
+Snooper 0 finished  BUS_RDX at time 287.00
+CACHE Processor: 0  Time: 287.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 1021
+CACHE[0][0]: Word[6]: 22
+CACHE[0][0]: Word[7]: 23
+********************************
+Snooper 0 Done with my own BUS_RDX request. Time: 288.00
+Processor 0 -- Completed  cache miss for address 6010f8. Time: 288.00
+Processor 0 --  Cache Hit: Address 6010f8 Time 288.00
+procId 0	Write Hits: 5 Address: 6010f8
+CACHE Processor: 0  Time: 288.00
+CACHE[0][0]: Word[0]: 1016
+CACHE[0][0]: Word[1]: 1017
+CACHE[0][0]: Word[2]: 1018
+CACHE[0][0]: Word[3]: 1019
+CACHE[0][0]: Word[4]: 1020
+CACHE[0][0]: Word[5]: 1021
+CACHE[0][0]: Word[6]: 1022
+CACHE[0][0]: Word[7]: 23
+********************************
+BUS GRANT: Time 289.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 289.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 6010fc  Time 289.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 289.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 289.00
+
+Processor 0 makes READ request: Address: 601100 Time:289.00
+Processor 0 -- Cache Miss: Address 601100 Time 289.00
+Processor 0 --  BUS REQUEST Time 289.00
+Snooper 0 finished BUS_RD at time 299.00. CACHE[0][0].STATE: S
+Snooper 1 finished  BUS_RD at time 299.00
+CACHE Processor: 1  Time: 299.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 1017
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 1019
+CACHE[1][0]: Word[4]: 1020
+CACHE[1][0]: Word[5]: 1021
+CACHE[1][0]: Word[6]: 1022
+CACHE[1][0]: Word[7]: 23
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 300.00
+Processor 1 -- Completed  cache miss for address 6010fc. Time: 300.00
+Processor 1 --  Cache Hit: Address 6010fc Time 300.00
+BUS GRANT: Time 301.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 301.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 601100  Time 301.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 301.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 301.00
+Snooper 1 ignoring request at time 301.00
+
+Processor 1 makes WRITE request: Address: 6010fc Time:301.00
+Processor 1 --  Cache Hit: Address 6010fc Time 301.00
+Processor  1: Need UPGRADE -- Address 6010fc Time 301.00
+Processor 1 --  BUS REQUEST Time 301.00
+Snooper 0 finished  BUS_RD at time 311.00
+CACHE Processor: 0  Time: 311.00
+CACHE[0][0]: Word[0]: 24
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 312.00
+Processor 0 -- Completed  cache miss for address 601100. Time: 312.00
+Processor 0 --  Cache Hit: Address 601100 Time 312.00
+BUS GRANT: Time 313.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: INV Time 313.00
+Processor 1 -- BROADCAST Command INV  Address 6010fc  Time 313.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 313.00
+Snooper 0 ignoring request at time 313.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 313.00
+Snooper 1 handled INVALIDATE from processor 1 at time 313.00
+
+Processor 0 makes WRITE request: Address: 601100 Time:313.00
+Processor 0 --  Cache Hit: Address 601100 Time 313.00
+Processor  0: Need UPGRADE -- Address 601100 Time 313.00
+Processor 0 --  BUS REQUEST Time 313.00
+Snooper 1 Done with my own INV request. Time: 314.00
+Processor  1: Completed UPGRADE -- Address: 6010fc STATE[1][0]: M  Time: 314.00
+CACHE Processor: 1  Time: 314.00
+CACHE[1][0]: Word[0]: 1016
+CACHE[1][0]: Word[1]: 1017
+CACHE[1][0]: Word[2]: 1018
+CACHE[1][0]: Word[3]: 1019
+CACHE[1][0]: Word[4]: 1020
+CACHE[1][0]: Word[5]: 1021
+CACHE[1][0]: Word[6]: 1022
+CACHE[1][0]: Word[7]: 1023
+********************************
+
+Processor 1 makes READ request: Address: 601104 Time:314.00
+Processor 1 -- Cache Miss: Address 601104 Time 314.00
+Processor 1 --  BUS REQUEST Time 314.00
+BUS GRANT: Time 315.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 315.00
+Processor 0 -- BROADCAST Command INV  Address 601100  Time 315.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 315.00
+Snooper 0 handled INVALIDATE from processor 0 at time 315.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 315.00
+Snooper 1 ignoring request at time 315.00
+Snooper 0 Done with my own INV request. Time: 316.00
+Processor  0: Completed UPGRADE -- Address: 601100 STATE[0][0]: M  Time: 316.00
+CACHE Processor: 0  Time: 316.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 26
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601108 Time:316.00
+Processor 0 --  Cache Hit: Address 601108 Time 316.00
+BUS GRANT: Time 317.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RD Time 317.00
+Processor 1 -- BROADCAST Command BUS_RD  Address 601104  Time 317.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 317.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 317.00
+CACHE[1][0].STATE: M
+
+Processor 0 makes WRITE request: Address: 601108 Time:317.00
+Processor 0 --  Cache Hit: Address 601108 Time 317.00
+Processor  0: Need UPGRADE -- Address 601108 Time 317.00
+Processor 0 --  BUS REQUEST Time 317.00
+Snooper 0 finished BUS_RD at time 327.00. CACHE[0][0].STATE: SM
+Snooper 1 finished  BUS_RD at time 337.00
+CACHE Processor: 1  Time: 337.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 25
+CACHE[1][0]: Word[2]: 26
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 28
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+Snooper 1 Done with my own BUS_RD request. Time: 338.00
+Processor 1 -- Completed  cache miss for address 601104. Time: 338.00
+Processor 1 --  Cache Hit: Address 601104 Time 338.00
+BUS GRANT: Time 339.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: INV Time 339.00
+Processor 0 -- BROADCAST Command INV  Address 601108  Time 339.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 339.00
+Snooper 0 handled INVALIDATE from processor 0 at time 339.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 339.00
+Snooper 1 finished handling INV  at time 339.00
+
+Processor 1 makes WRITE request: Address: 601104 Time:339.00
+Processor 1 -- Cache Miss: Address 601104 Time 339.00
+procId 1	Write Misses: 7 Address: 601104
+Processor 1 --  BUS REQUEST Time 339.00
+Snooper 0 Done with my own INV request. Time: 340.00
+Processor  0: Completed UPGRADE -- Address: 601108 STATE[0][0]: M  Time: 340.00
+CACHE Processor: 0  Time: 340.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 28
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+
+Processor 0 makes READ request: Address: 601110 Time:340.00
+Processor 0 --  Cache Hit: Address 601110 Time 340.00
+BUS GRANT: Time 341.00.  BUS_GRANT[1]: TRUE
+
+Processor 0 makes WRITE request: Address: 601110 Time:341.00
+Processor 0 --  Cache Hit: Address 601110 Time 341.00
+procId 0	Write Hits: 6 Address: 601110
+CACHE Processor: 0  Time: 341.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 25
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 341.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 601104  Time 341.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 341.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 341.00
+
+Processor 0 makes READ request: Address: 601118 Time:342.00
+Processor 0 -- Cache Miss: Address 601118 Time 342.00
+Processor 0 --  BUS REQUEST Time 342.00
+Snooper 0 finished BUS_RDX at time 351.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 351.00
+CACHE Processor: 1  Time: 351.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 25
+CACHE[1][0]: Word[2]: 1026
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 1028
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 352.00
+Processor 1 -- Completed  cache miss for address 601104. Time: 352.00
+Processor 1 --  Cache Hit: Address 601104 Time 352.00
+procId 1	Write Hits: 9 Address: 601104
+CACHE Processor: 1  Time: 352.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 1025
+CACHE[1][0]: Word[2]: 1026
+CACHE[1][0]: Word[3]: 27
+CACHE[1][0]: Word[4]: 1028
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+BUS GRANT: Time 353.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RD Time 353.00
+Processor 0 -- BROADCAST Command BUS_RD  Address 601118  Time 353.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 353.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 353.00
+
+Processor 1 makes READ request: Address: 60110c Time:353.00
+Processor 1 --  Cache Hit: Address 60110c Time 353.00
+
+Processor 1 makes WRITE request: Address: 60110c Time:354.00
+Processor 1 --  Cache Hit: Address 60110c Time 354.00
+Processor  1: Need UPGRADE -- Address 60110c Time 354.00
+Processor 1 --  BUS REQUEST Time 354.00
+Snooper 1 finished BUS_RD at time 363.00. CACHE[1][0].STATE: SM
+Snooper 0 finished  BUS_RD at time 363.00
+CACHE Processor: 0  Time: 363.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 27
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Snooper 0 Done with my own BUS_RD request. Time: 364.00
+Processor 0 -- Completed  cache miss for address 601118. Time: 364.00
+Processor 0 --  Cache Hit: Address 601118 Time 364.00
+BUS GRANT: Time 365.00.  BUS_GRANT[1]: TRUE
+
+Processor 0 makes WRITE request: Address: 601118 Time:365.00
+Processor 0 --  Cache Hit: Address 601118 Time 365.00
+Processor  0: Need UPGRADE -- Address 601118 Time 365.00
+Processor 0 --  BUS REQUEST Time 365.00
+Processor 1 -- BUS GRANT  COMMAND: INV Time 365.00
+Processor 1 -- BROADCAST Command INV  Address 60110c  Time 365.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 365.00
+Snooper 0 finished handling INV  at time 365.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 365.00
+Snooper 1 handled INVALIDATE from processor 1 at time 365.00
+Snooper 1 Done with my own INV request. Time: 366.00
+Processor  1: Completed UPGRADE -- Address: 60110c STATE[1][0]: M  Time: 366.00
+CACHE Processor: 1  Time: 366.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 1025
+CACHE[1][0]: Word[2]: 1026
+CACHE[1][0]: Word[3]: 1027
+CACHE[1][0]: Word[4]: 1028
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 30
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 1 makes READ request: Address: 601114 Time:366.00
+Processor 1 --  Cache Hit: Address 601114 Time 366.00
+BUS GRANT: Time 367.00.  BUS_GRANT[0]: TRUE
+Processor 0 -- BUS GRANT  COMMAND: BUS_RDX Time 367.00
+Processor 0 -- BROADCAST Command BUS_RDX  Address 601118  Time 367.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 367.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 367.00
+
+Processor 1 makes WRITE request: Address: 601114 Time:367.00
+Processor 1 -- Cache Miss: Address 601114 Time 367.00
+procId 1	Write Misses: 8 Address: 601114
+Processor 1 --  BUS REQUEST Time 367.00
+Snooper 1 finished BUS_RDX at time 377.00. CACHE[1][0].STATE: I
+Snooper 0 finished  BUS_RDX at time 377.00
+CACHE Processor: 0  Time: 377.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 30
+CACHE[0][0]: Word[7]: 31
+********************************
+Snooper 0 Done with my own BUS_RDX request. Time: 378.00
+Processor  0: Completed Interrupted UPGRADE -- Address: 601118 STATE[0][0]: M  Time: 378.00
+CACHE Processor: 0  Time: 378.00
+CACHE[0][0]: Word[0]: 1024
+CACHE[0][0]: Word[1]: 1025
+CACHE[0][0]: Word[2]: 1026
+CACHE[0][0]: Word[3]: 1027
+CACHE[0][0]: Word[4]: 1028
+CACHE[0][0]: Word[5]: 29
+CACHE[0][0]: Word[6]: 1030
+CACHE[0][0]: Word[7]: 31
+********************************
+BUS GRANT: Time 379.00.  BUS_GRANT[1]: TRUE
+Processor 1 -- BUS GRANT  COMMAND: BUS_RDX Time 379.00
+Processor 1 -- BROADCAST Command BUS_RDX  Address 601114  Time 379.00
+BusSnooper[0] --  Woken with Bus COMMAND  at time 379.00
+BusSnooper[1] --  Woken with Bus COMMAND  at time 379.00
+Snooper 0 finished BUS_RDX at time 389.00. CACHE[0][0].STATE: I
+Snooper 1 finished  BUS_RDX at time 389.00
+CACHE Processor: 1  Time: 389.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 1025
+CACHE[1][0]: Word[2]: 1026
+CACHE[1][0]: Word[3]: 1027
+CACHE[1][0]: Word[4]: 1028
+CACHE[1][0]: Word[5]: 29
+CACHE[1][0]: Word[6]: 1030
+CACHE[1][0]: Word[7]: 31
+********************************
+Snooper 1 Done with my own BUS_RDX request. Time: 390.00
+Processor 1 -- Completed  cache miss for address 601114. Time: 390.00
+Processor 1 --  Cache Hit: Address 601114 Time 390.00
+procId 1	Write Hits: 10 Address: 601114
+CACHE Processor: 1  Time: 390.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 1025
+CACHE[1][0]: Word[2]: 1026
+CACHE[1][0]: Word[3]: 1027
+CACHE[1][0]: Word[4]: 1028
+CACHE[1][0]: Word[5]: 1029
+CACHE[1][0]: Word[6]: 1030
+CACHE[1][0]: Word[7]: 31
+********************************
+
+Processor 1 makes READ request: Address: 60111c Time:391.00
+Processor 1 --  Cache Hit: Address 60111c Time 391.00
+
+Processor 1 makes WRITE request: Address: 60111c Time:392.00
+Processor 1 --  Cache Hit: Address 60111c Time 392.00
+procId 1	Write Hits: 11 Address: 60111c
+CACHE Processor: 1  Time: 392.00
+CACHE[1][0]: Word[0]: 1024
+CACHE[1][0]: Word[1]: 1025
+CACHE[1][0]: Word[2]: 1026
+CACHE[1][0]: Word[3]: 1027
+CACHE[1][0]: Word[4]: 1028
+CACHE[1][0]: Word[5]: 1029
+CACHE[1][0]: Word[6]: 1030
+CACHE[1][0]: Word[7]: 1031
+********************************
+
+Processor: 0	READ HITS: 16	READ MISSES: 7	SILENT WRITE HITS: 6	UPGRADES: 7	WRITE MISSES: 6	WRITEBACKS: 0	Num U converted: 3	Time: 393.00
+Simulation ended  at 393.00
+
+Processor: 1	READ HITS: 16	READ MISSES: 7	SILENT WRITE HITS: 11	UPGRADES: 5	WRITE MISSES: 8	WRITEBACKS: 3	Num U converted: 0	Time: 393.00
+Simulation ended  at 393.00
+
+
+READ HITS: 32	READ MISSES: 14	SILENT WRITE HITS: 17	UPGRADES: 12	WRITE MISSES: 14	WRITEBACKS: 3	Time: 393.00	Number Upgrades Converted to BUSRDX: 3
+MEM[0] : 1000
+MEM[1] : 1001
+MEM[2] : 1002
+MEM[3] : 1003
+MEM[4] : 1004
+MEM[5] : 1005
+MEM[6] : 1006
+MEM[7] : 1007
+MEM[8] : 1008
+MEM[9] : 1009
+MEM[10] : 1010
+MEM[11] : 1011
+MEM[12] : 1012
+MEM[13] : 1013
+MEM[14] : 1014
+MEM[15] : 1015
+MEM[16] : 1016
+MEM[17] : 1017
+MEM[18] : 1018
+MEM[19] : 1019
+MEM[20] : 1020
+MEM[21] : 1021
+MEM[22] : 1022
+MEM[23] : 1023
+MEM[24] : 1024
+MEM[25] : 1025
+MEM[26] : 1026
+MEM[27] : 1027
+MEM[28] : 1028
+MEM[29] : 29
+MEM[30] : 1030
+MEM[31] : 31

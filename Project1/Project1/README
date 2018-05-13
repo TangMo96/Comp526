@@ -1,0 +1,21 @@
+Synopsis:
+
+Source Files
+
+sync.c  -- C Source for simulation of  SYNCHRONOUS reads and SYNCHRONOUS writeback
+async_template.c --  Partial C Source for simulation of SYNCHRONOUS reads and ASYNCHRONOUS writeback
+maketrace.c -- Simple address trace generator
+
+Header Files
+sim.h -- Header file for Yacsim
+global.h -- Header file for simulation code
+
+Object Files:
+yacsim.o -- Yacsim Simulator 
+utils.o  -- Utility functions for the simulator 
+
+Text Files
+
+README -- This file
+utilities.txt -- Description of functions in utilities.o
+asyncTrace  -- Sample output trace for 64 requests (TOTALTRACE 64)
